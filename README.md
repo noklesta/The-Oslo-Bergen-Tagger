@@ -1,11 +1,11 @@
 Installation and usage
 =====================
 
-The Oslo-Bergen Tagger consists of 3 parts:
+The Oslo-Bergen Tagger consists of three parts:
 
-* A multitagger
-* A Constraint Grammar tagger
-* A statistical tagger (so far only for bokm&aring;l)
+* A multitagger (tokenizer, morphological analyzer, and compund analyzer)
+* A Constraint Grammar (CG) tagger
+* A statistical tagger (currently only for bokm&aring;l)
 
 The multitagger
 ---------------
@@ -23,7 +23,8 @@ the bin directory. For example:
 The Constraint Grammar tagger
 -----------------------------
 
-1. Checkout the VISL CG-3 repository from the Subversion repository at the University of Southern Denmark, and install:
+1. In the root folder of the distribution, check out the VISL CG-3 repository from the Subversion repository at 
+the University of Southern Denmark and install it:
 
 		$ svn co --username anonymous --password anonymous
 		    http://beta.visl.sdu.dk/svn/visl/tools/vislcg3/trunk vislcg3
@@ -37,7 +38,16 @@ The Constraint Grammar tagger
 	If you encounter any problems, have a look at the installation instructions at
 	<http://beta.visl.sdu.dk/cg3/chunked/installation.html>
 
-2. CG rules for morphological disambiguation of bokm&aring;l are found in the `cg` folder.
+2. CG rules for morphological disambiguation of bokm&aring;l and nynorsk are found in the `cg` folder.
+
+	`bm_morf.cg` and `nn_morf.cg` should be used when you only want to do CG tagging of bokm&aring;l and nynorsk, respectively. 
+The CG tagger may leave some ambiguity, either because it is not confident enough to do complete
+disambiguation, or because there is genuine ambiguity in the material (such as nouns that can be analyzed as either
+masculine or feminine).
+
+	`bm_morf-prestat.cg` should be used when you want to run statistical disambiguation after CG disambiguation in order
+to obtain completely disambiguated output (currently only available for bokm&aring;l). This is useful, for instance, 
+for many language technology purposes. On the other hand, it may remove genuine ambiguity from the text.
 
 
 The statistical tagger
