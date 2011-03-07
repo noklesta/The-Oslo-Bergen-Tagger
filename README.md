@@ -19,7 +19,7 @@ The multitagger is currently only distributed in binary form (source code will
 be available soon). A binary compiled on 64-bit RedHat Enterprise Linux 5
 can be downloaded from our server at the Text Laboratory, University of Oslo
 (<http://www.tekstlab.uio.no/mtag/linux64/mtag>). The file should be placed in 
-the bin directory. For example:
+the `bin` directory. For example:
 
 	$ cd bin
 	$ wget http://www.tekstlab.uio.no/mtag/linux64/mtag
@@ -58,14 +58,14 @@ for many language technology purposes. On the other hand, it may remove genuine 
 The statistical tagger
 ----------------------
 
-1. Clone the OBT-Stat git repository from GitHub:
+1. Clone the OBT-Stat git repository from GitHub in the root folder of the distribution:
 
 		$ git clone git://github.com/andrely/OBT-Stat.git
 
 2. Download the HunPos distribution for your operating system and unpack it 
 inside the `OBT-Stat/hunpos` folder (producing a folder called, e.g., 
-`OBT-Stat/hunpos/unpos-1.0-linux`). HunPos can be downloaded from here: 
-<http://code.google.com/p/hunpos/downloads/list>
+`OBT-Stat/hunpos/hunpos-1.0-linux`). HunPos can be downloaded from
+<http://code.google.com/p/hunpos/downloads/list>.
 
 
 Running the tagger
