@@ -1,7 +1,12 @@
-Installation and usage
+Introduction
 =====================
 
-The Oslo-Bergen Tagger consists of three parts:
+The Oslo-Bergen Tagger is a morphosyntactic tagger for Norwegian bokm&aring;l and nynorsk.
+For general information about the tagger, visit its home page: <http://www.tekstlab.uio.no/obt-ny/>.
+
+Installation and usage
+======================
+The tagger consists of three parts:
 
 * A multitagger (tokenizer, morphological analyzer, and compund analyzer)
 * A Constraint Grammar (CG) tagger
