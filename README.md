@@ -28,8 +28,10 @@ the `bin` directory. For example:
 The Constraint Grammar tagger
 -----------------------------
 
-1. In the root folder of the distribution, check out the VISL CG-3 repository from the Subversion repository at 
-the University of Southern Denmark and install it:
+1. Check out the VISL CG-3 repository from the Subversion repository at 
+the University of Southern Denmark and install it. The repository can be
+checked out anywhere on your machine since it will be installed into a central
+location such as `/usr/local/bin`.
 
 		$ svn co --username anonymous --password anonymous
 		    http://beta.visl.sdu.dk/svn/visl/tools/vislcg3/trunk vislcg3
