@@ -69,9 +69,9 @@ inside the `OBT-Stat/hunpos` folder (producing a folder called, e.g.,
 `OBT-Stat/hunpos/hunpos-1.0-linux`). HunPos can be downloaded from
 <http://code.google.com/p/hunpos/downloads/list>. For example,
 
-	$ cd OBT-Stat/hunpos
-	$ wget http://hunpos.googlecode.com/files/hunpos-1.0-linux.tgz
-	$ tar xvzf hunpos-1.0-linux.tgz 
+		$ cd OBT-Stat/hunpos
+		$ wget http://hunpos.googlecode.com/files/hunpos-1.0-linux.tgz
+		$ tar xvzf hunpos-1.0-linux.tgz 
 
 
 Running the tagger
