@@ -16,10 +16,11 @@ The multitagger
 ---------------
 
 The multitagger is currently only distributed in binary form (source code will
-be available soon). A binary compiled on 64-bit RedHat Enterprise Linux 5
+be available soon). Compiled binaries for 32- and 64-bits Linux
 can be downloaded from our server at the Text Laboratory, University of Oslo
-(<http://www.tekstlab.uio.no/mtag/linux64/mtag>). The file should be placed in 
-the `bin` directory. For example:
+(<http://www.tekstlab.uio.no/mtag/linux32/mtag> and
+<http://www.tekstlab.uio.no/mtag/linux64/mtag>, respectively). The file should
+be placed in the `bin` directory. For example:
 
 	$ cd bin
 	$ wget http://www.tekstlab.uio.no/mtag/linux64/mtag
