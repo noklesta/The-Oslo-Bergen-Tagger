@@ -15,12 +15,14 @@ The tagger consists of three parts:
 The multitagger
 ---------------
 
-The multitagger is currently only distributed in binary form (source code will
-be available soon). Compiled binaries for 32- and 64-bits Linux
-can be downloaded from our server at the Text Laboratory, University of Oslo
-(<http://www.tekstlab.uio.no/mtag/linux32/mtag32> and
-<http://www.tekstlab.uio.no/mtag/linux64/mtag>, respectively). The file should
-be placed in the `bin` directory. For example:
+The multitagger is currently only distributed in binary form
+(source code will be available soon). Compiled binaries for
+32- and 64-bits Linux and 64-bits Mac OS X can be downloaded
+from our server at the Text Laboratory, University of
+Oslo (<http://www.tekstlab.uio.no/mtag/linux32/mtag32>,
+<http://www.tekstlab.uio.no/mtag/linux64/mtag>, and
+<http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64>, respectively). The
+file should be placed in the `bin` directory. For example:
 
 	$ cd bin
 	$ wget http://www.tekstlab.uio.no/mtag/linux64/mtag
