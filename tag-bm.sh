@@ -7,5 +7,5 @@ then
 fi
 
 bin/mtag -wxml < $1 | vislcg3 -C latin1 --codepage-input \
-  utf-8 -g cg/bm_morf-prestat.cg --codepage-output utf-8 --no-pass-origin | \
+  utf-8 -g cg/bm_morf-prestat.cg --codepage-output utf-8 --no-pass-origin -e | \
   OBT-Stat/bin/run_obt_stat.rb | perl -ne 'print if /\S/'
