@@ -95,3 +95,10 @@ CG disambiguation only, nynorsk:
 
 	$ ./tag-nostat-nn.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
 
+
+
+Third-party software that uses the tagger
+-----------------------------------------
+
+[Clojure library by Aleksander Skj&aelig;veland Larsen](https://github.com/ogrim/clj-obt)
+
