@@ -34,19 +34,8 @@ The Constraint Grammar tagger
 1. Check out the VISL CG-3 repository from the Subversion repository at 
 the University of Southern Denmark and install it. The repository can be
 checked out anywhere on your machine since it will be installed into a central
-location such as `/usr/local/bin`.
-
-		$ svn co --username anonymous --password anonymous
-		    http://beta.visl.sdu.dk/svn/visl/tools/vislcg3/trunk vislcg3
-		$ cd vislcg3/
-		$ ./autogen.sh
-		$ make
-		$ ./test/runall.pl
-		... and if all tests succeed ...
-		$ make install
-
-	If you encounter any problems, have a look at the installation instructions at
-	<http://beta.visl.sdu.dk/cg3/chunked/installation.html>
+location such as `/usr/local/bin`. Installation instructions for various 
+platforms can be found at <http://beta.visl.sdu.dk/cg3/chunked/installation.html>.
 
 2. CG rules for morphological disambiguation of bokm&aring;l and nynorsk are found in the `cg` folder.
 
