@@ -52,18 +52,9 @@ for many language technology purposes. On the other hand, it may remove genuine 
 The statistical tagger
 ----------------------
 
-1. Clone the OBT-Stat git repository from GitHub in the root folder of the distribution:
+Clone the OBT-Stat git repository from GitHub in the root folder of the distribution:
 
 		$ git clone git://github.com/andrely/OBT-Stat.git
-
-2. Download the HunPos distribution for your operating system and unpack it 
-inside the `OBT-Stat/hunpos` folder (producing a folder called, e.g., 
-`OBT-Stat/hunpos/hunpos-1.0-linux`). HunPos can be downloaded from
-<http://code.google.com/p/hunpos/downloads/list>. For example:
-
-		$ cd OBT-Stat/hunpos
-		$ wget http://hunpos.googlecode.com/files/hunpos-1.0-linux.tgz
-		$ tar xvzf hunpos-1.0-linux.tgz 
 
 
 Running the tagger
