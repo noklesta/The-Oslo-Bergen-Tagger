@@ -15,8 +15,7 @@ The tagger consists of three parts:
 The multitagger
 ---------------
 
-The multitagger is currently only distributed in binary form
-(source code will be available soon). Compiled binaries for
+The multitagger is currently only distributed in binary form. Compiled binaries for
 32- and 64-bits Linux and 64-bits Mac OS X can be downloaded
 from our server at the Text Laboratory, University of
 Oslo (<http://www.tekstlab.uio.no/mtag/linux32/mtag32>,
