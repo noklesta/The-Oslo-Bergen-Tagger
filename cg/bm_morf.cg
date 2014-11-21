@@ -5299,6 +5299,10 @@ CONSTRAINTS
 	(*-1 setn-gr BARRIER %ha%)
 ;
 
+#:5101
+"<av>"  REMOVE:5101 (adj fork) IF
+	(0 prep)
+;
 
 #:3740
 "<bak>"  REMOVE:3740 (subst) IF
