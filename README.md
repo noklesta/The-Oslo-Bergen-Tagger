@@ -12,6 +12,8 @@ The tagger consists of three parts:
 * A Constraint Grammar (CG) tagger
 * A statistical tagger (currently only for bokm&aring;l)
 
+[Watch the installation on YouTube](https://www.youtube.com/watch?v=grqaAAcAHhM&feature=youtu.be) (On OS X Yosemite)
+
 The multitagger
 ---------------
 
