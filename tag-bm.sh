@@ -6,6 +6,14 @@ then
   exit $E_BADARGS
 fi
 
-bin/mtag -wxml < $1 | vislcg3 -C latin1 --codepage-input \
-  utf-8 -g cg/bm_morf-prestat.cg --codepage-output utf-8 --no-pass-origin -e | \
-  OBT-Stat/bin/run_obt_stat.rb | perl -ne 'print if /\S/'
+OBT=$(dirname $0)
+
+"$OBT"/bin/mtag -wxml < $1				\
+    | vislcg3 --codepage-all latin1			\
+	      --codepage-input utf-8			\
+	      --grammar "$OBT"/cg/bm_morf-prestat.cg	\
+	      --codepage-output utf-8			\
+	      --no-pass-origin				\
+	      --show-end-tags				\
+    | "$OBT"/OBT-Stat/bin/run_obt_stat.rb		\
+    | perl -ne 'print if /\S/'
