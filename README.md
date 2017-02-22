@@ -30,6 +30,8 @@ and make it executable. For example:
 	$ wget http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64
 	$ mv mtag-osx64 mtag
 	$ chmod +x mtag
+	
+Note: If mtag crashes and you are running a fairly recent 64-bit version of Linux, try using <http://www.tekstlab.uio.no/mtag/linux64/mtag-linux-1-11> instead.
 
 
 The Constraint Grammar tagger
