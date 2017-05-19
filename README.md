@@ -1,5 +1,5 @@
 Introduction
-=====================
+============
 
 The Oslo-Bergen Tagger is a morphosyntactic tagger for Norwegian bokm&aring;l and nynorsk.
 For general information about the tagger, visit its home page: <http://www.tekstlab.uio.no/obt-ny/>.
@@ -12,7 +12,11 @@ The tagger consists of three parts:
 * A Constraint Grammar (CG) tagger
 * A statistical tagger (currently only for bokm&aring;l)
 
-[Watch the installation on YouTube](https://www.youtube.com/watch?v=grqaAAcAHhM&feature=youtu.be) (On OS X Yosemite)
+Install the binary distribution and our dependencies using this script:
+
+    ./bootstrap.sh
+
+Or [watch the manual installation on YouTube](https://www.youtube.com/watch?v=grqaAAcAHhM&feature=youtu.be) (On OS X Yosemite)
 
 The multitagger
 ---------------
@@ -26,10 +30,10 @@ Oslo (<http://www.tekstlab.uio.no/mtag/linux32/mtag32>,
 file should be placed in the `bin` directory. If necessary, rename the file to `mtag`, 
 and make it executable. For example:
 
-	$ cd The-Oslo-Bergen-Tagger/bin
-	$ wget http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64
-	$ mv mtag-osx64 mtag
-	$ chmod +x mtag
+	cd The-Oslo-Bergen-Tagger/bin
+	wget http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64
+	mv mtag-osx64 mtag
+	chmod +x mtag
 	
 Note: If mtag crashes and you are running a fairly recent 64-bit version of Linux, try using <http://www.tekstlab.uio.no/mtag/linux64/mtag-linux-1-11> instead.
 
@@ -60,7 +64,7 @@ The statistical tagger
 
 Clone the OBT-Stat git repository from GitHub in the root folder of the distribution:
 
-		$ git clone git://github.com/andrely/OBT-Stat.git
+    git clone git://github.com/andrely/OBT-Stat.git
 
 
 Running the tagger
@@ -71,15 +75,15 @@ CG disambiguation, and optionally statistical disambiguation (for bokm&aring;l).
 
 CG and statistical disambiguation, bokm&aring;l:
 
-	$ ./tag-bm.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
+	./tag-bm.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
 
 CG disambiguation only, bokm&aring;l:
 
-	$ ./tag-nostat-bm.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
+	./tag-nostat-bm.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
 
 CG disambiguation only, nynorsk:
 
-	$ ./tag-nostat-nn.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
+	./tag-nostat-nn.sh TEXTFILE > DISAMBIGUATED_OUTPUT_FILE
 
 
 
