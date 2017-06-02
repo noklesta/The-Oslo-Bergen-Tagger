@@ -90,5 +90,6 @@ CG disambiguation only, nynorsk:
 Third-party software that uses the tagger
 -----------------------------------------
 
-[Clojure library by Aleksander Skj&aelig;veland Larsen](https://github.com/ogrim/clj-obt)
+[Clojure library by Aleksander Skj&aelig;veland Larsen](https://github.com/ogrim/clj-obt)  
+[Python library by Mats Byrkjeland](https://github.com/draperunner/obt)
 
