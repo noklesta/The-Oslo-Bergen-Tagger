@@ -21,22 +21,7 @@ Or [watch the manual installation on YouTube](https://www.youtube.com/watch?v=gr
 The multitagger
 ---------------
 
-The multitagger is currently only distributed in binary form. Compiled binaries for
-32- and 64-bits Linux and 64-bits Mac OS X can be downloaded
-from our server at the Text Laboratory, University of
-Oslo (<http://www.tekstlab.uio.no/mtag/linux32/mtag32>,
-<http://www.tekstlab.uio.no/mtag/linux64/mtag>, and
-<http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64>, respectively). The
-file should be placed in the `bin` directory. If necessary, rename the file to `mtag`, 
-and make it executable. For example:
-
-	cd The-Oslo-Bergen-Tagger/bin
-	wget http://www.tekstlab.uio.no/mtag/osx64/mtag-osx64
-	mv mtag-osx64 mtag
-	chmod +x mtag
-	
-Note: If mtag crashes and you are running a fairly recent 64-bit version of Linux, try using <http://www.tekstlab.uio.no/mtag/linux64/mtag-linux-1-11> instead.
-
+The multitagger is written in Python and can be installed from https://github.com/textlab/mtag.
 
 The Constraint Grammar tagger
 -----------------------------
