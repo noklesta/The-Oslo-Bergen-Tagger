@@ -16,6 +16,7 @@ The multitagger
 ---------------
 
 The multitagger is written in Python and can be cloned from https://github.com/textlab/mtag:
+
     git clone git://github.com/textlab/mtag.git
 
 The Constraint Grammar tagger
