@@ -1232,7 +1232,7 @@ CONSTRAINTS
 "<anna>" SELECT:6017 (subst prop) IF
 	 (-1 >>>)
 	 (1 subst-prop)
-
+;
 # Anna Hald
 
 
@@ -1240,7 +1240,7 @@ CONSTRAINTS
 "<anna>" SELECT:6018 (subst prop) IF
 	 (-1 >>>)
 	 (NOT 1 nom)
-
+;
 # Anna Hald
 
 #:4975
@@ -7135,7 +7135,7 @@ CONSTRAINTS
 
 #:6072
 "<vita>" REMOVE:6072 (subst nøyt) IF
-	 (O inf)
+	 (0 inf)
 ;
 #sjeldent i fleirtal - og eintal
 
@@ -19043,7 +19043,7 @@ SELECT:6094 (adj pos mask ub eint) IF
 	(*-1 setn-gr-u-strek LINK *1 nom-reinmask-eint/prop LINK NOT 0 subst-gen)
 	(*-1 setn-gr-u-strek LINK *1 subst/pron/%all%/%mang%/%mange% LINK 0 nom-mask-eint/prop LINK NOT 0 fl)
 	(*-1 setn-gr-u-strek LINK NOT 1 prep)
-
+;
 
 
 #:3600
@@ -37313,7 +37313,7 @@ SELECT:2602 (imp) IF
 	(-2 prop/%du%)
 	(-3 setn-gr)
 	(*1C pron-akk BARRIER ikkje-adv-prep)
-#;
+;
 
 
 #:2603

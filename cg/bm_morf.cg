@@ -2104,6 +2104,7 @@ CONSTRAINTS
 #: 4060
 "<fór>" SELECT:4060 (verb pret)
 	(0 verb)
+;
 
 #:3650
 "<for>"  SELECT:3650 (adv) IF
@@ -6096,6 +6097,7 @@ CONSTRAINTS
 "<hjem>" REMOVE:4048 (prep)
 	 (-2 %hus%)
 	 (-1 %og%)
+;
 #hus og hjem
 
 #:3537
@@ -6196,11 +6198,13 @@ CONSTRAINTS
 "<ingen>"  SELECT:1506 (det) IF
 	(-1C fv)
 	(*1 ub-ent-mask-subst  LINK 0 fl-subst LINK NOT *-1 ikke-adv-adj)
+;
 
 
 #:1510
 "<ingen>"  SELECT:1510 (det) IF
 	(*1 ub-ent-mask-subst  LINK 0 fl-subst LINK NOT 0 ikke-subst LINK NOT *-1 ikke-adv-adj)
+;
 
 
 #:1508
@@ -23882,6 +23886,7 @@ CONSTRAINTS
 	(-1 prep)
 	(NOT 1  det)
 	(NOT 1 subst/adj)
+;
 #mest sannsynlig substantiv etter prep
 
 
@@ -23946,6 +23951,7 @@ CONSTRAINTS
 "<far>" REMOVE:4040 (subst fl)IF
 	(NOT -1 adj-fl)
 	(NOT -1 fl-det)
+;
 # er oftest ikke i betydningen "spor" (fl)
  
 
@@ -24159,6 +24165,7 @@ CONSTRAINTS
 #:4045
 "<mine>" REMOVE (verb imp) IF
 	 (0 poss-det)
+;
 
 #:3414
 "<navnet>"  REMOVE:3414 (adj) IF
@@ -24221,6 +24228,7 @@ CONSTRAINTS
 #:4041
 "<sin>" REMOVE:4041 (fork subst) IF
 	(0 poss-det)
+;
 
 
 
