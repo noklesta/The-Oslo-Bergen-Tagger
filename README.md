@@ -12,16 +12,11 @@ The tagger consists of three parts:
 * A Constraint Grammar (CG) tagger
 * A statistical tagger (currently only for bokm&aring;l)
 
-Install the binary distribution and our dependencies using this script:
-
-    ./bootstrap.sh
-
-Or [watch the manual installation on YouTube](https://www.youtube.com/watch?v=grqaAAcAHhM&feature=youtu.be) (On OS X Yosemite)
-
 The multitagger
 ---------------
 
-The multitagger is written in Python and can be installed from https://github.com/textlab/mtag.
+The multitagger is written in Python and can be cloned from https://github.com/textlab/mtag:
+    git clone git://github.com/textlab/mtag.git
 
 The Constraint Grammar tagger
 -----------------------------
