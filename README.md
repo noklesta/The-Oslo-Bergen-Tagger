@@ -46,7 +46,7 @@ The statistical tagger
 
 Clone the OBT-Stat git repository from GitHub in the root folder of the distribution:
 
-    git clone git://github.com/andrely/OBT-Stat.git
+    git clone git://github.com/textlab/OBT-Stat.git
 
 
 Running the tagger
