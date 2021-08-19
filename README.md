@@ -22,8 +22,8 @@ The multitagger is written in Python and can be cloned from https://github.com/t
 The Constraint Grammar tagger
 -----------------------------
 
-1. Check out the VISL CG-3 repository from the Subversion repository at 
-the University of Southern Denmark and install it. The repository can be
+1. Check out VISL CG-3 from the Github repository created by 
+the University of Southern Denmark (<https://github.com/GrammarSoft/cg3>) and install it. The repository can be
 checked out anywhere on your machine since it will be installed into a central
 location such as `/usr/local/bin`. For some platforms, there are also ready-made
 binaries available. Installation instructions for various 
