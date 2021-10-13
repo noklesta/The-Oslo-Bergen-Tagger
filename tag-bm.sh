@@ -21,5 +21,5 @@ fi
 	      --grammar "$OBT"/cg/bm_morf-prestat.cg	\
 	      --no-pass-origin				\
 	      --show-end-tags				\
-    | "$OBT"/OBT-Stat/bin/run_obt_stat.rb		\
+    | RUBYOPT="-KU -E utf-8:utf-8" "$OBT"/OBT-Stat/bin/run_obt_stat.rb		\
     | perl -ne 'print if /\S/'
