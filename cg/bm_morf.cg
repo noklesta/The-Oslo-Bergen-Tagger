@@ -2,7 +2,7 @@ DELIMITERS = "<.>" "<:>" "<!>" "<?>" "<|>" "<$.>" "<$:>" "<$!>" "<$?>" "<$|>";
 
 #PARENTHESES = ("<$(>" "$<)>") ("<$[>" "<$]>") ("<${>" "<$}>") ;
 
-LIST -ende = ".*ende"r  ;
+LIST -ende = ".*ende"r  ;      
 LIST %aldri% = "aldri" ;
 LIST %all% = "all" ;
 LIST %alle% = ("all" det fl) ;
@@ -32,6 +32,7 @@ LIST %av/i% = "i" "av" ;
 LIST %av/for% = ("av" prep) ("for" prep) ;
 LIST %bad% = "bad" ;
 LIST %bak% = ("bak" prep) ;
+LIST %bamse% = ("bamse" subst);
 LIST %bare% = ("bare" adv) ;
 LIST %begge% = "begge" ;
 LIST %begge/alle% = "begge" ("all" fl) ;
@@ -142,6 +143,7 @@ LIST %helhet% = ("helhet") ;
 LIST %heller%-verb = ("helle" pres) ;
 LIST %helst% = ("helst" adv) ;
 LIST %helt% = ("hel" adj nøyt) ;
+LIST %hen% = ("hen" pron) ; 
 LIST %henne% = "henne" ;
 LIST %hilsen% = "hilsen" ;
 LIST %ho% = ("ho" subst) ;
@@ -1647,7 +1649,11 @@ CONSTRAINTS
 #  "mest sannsynlig at best er adj dersom det
 # ikke er \"et best\""))
 
-
+#:4151
+"<brakar>" SELECT:4151 (subst mask) IF
+	  (-1 %bamse%)
+;
+# bamse brakar
 
 #:3729
 "<bredt>"  SELECT:3729 (verb perf-part) IF
@@ -2462,7 +2468,11 @@ CONSTRAINTS
 ;
 #  "Bare pref-part ved hjelpeverbet \"ha\""))
 
-
+#:4150
+"<garde>" SELECT:4150 (subst ubøy) IF
+	  (-1 %av%)
+;
+# av garde
 
 #:4021
 "<halvveis>" SELECT:4021 (adv) IF
@@ -2585,6 +2595,21 @@ CONSTRAINTS
 ;
 #  "en helt (subst)"))
 
+#:4200
+"<hen>"  REMOVE:4200 (adv) IF
+	(0 prep)
+;
+# Mai 2021: nye regler for hen
+# I følge referansegrammatikken er hen alltid prep og ikke adv (når hen ikke er pron )
+
+#:4201
+"<hen>"  SELECT:4201 (pron) IF
+	(-1C setn-gr)
+	(1 pres/pret)
+;
+#Hen ordner det.
+
+#hvor .. hen,(se) hen til, døde/gakk/gå/kom hen, annetsteds hen
 
 
 #:3793
@@ -5007,7 +5032,7 @@ CONSTRAINTS
 
 #:3141
 "<verken>"  SELECT:3141 (konj <adv>) IF
-	(*1 %eller% BARRIER)
+	(*1 %eller% BARRIER setn-gr)
 ;
 #  "verken ... eller"))
 
@@ -5284,7 +5309,11 @@ CONSTRAINTS
 ;
 #  "Bare adj ved \"den angående saken\""))
 
-
+#:4152
+"<anna>" SELECT:4152 (det nøyt) IF
+	  (-1 %blant%)
+;
+# blant
 
 #:3742
 "<anstrengt>"  REMOVE:3742 (verb perf-part) IF
@@ -5350,7 +5379,7 @@ CONSTRAINTS
 
 #:4009
 "<bare>"  REMOVE:4009 (adj fl) IF
-	(NOT **-1C fl-det BARRIER ikke-adv-adj)
+	(NOT *-1C fl-det BARRIER ikke-adv-adj)
 	(NOT *1 fl-subst BARRIER ikke-adv-adj)
 ;
 #  "bare adj i kontekster som: de bare trærne
@@ -5359,7 +5388,7 @@ CONSTRAINTS
 
 #:4012
 "<bare>"  REMOVE:4012 (adj be ent) IF
-	(NOT **-1C det-ent BARRIER ikke-adv-adj)
+	(NOT *-1C det-ent BARRIER ikke-adv-adj)
 ;
 #  "bare adj i kontekster som: det bare treet"))
 
@@ -12483,14 +12512,23 @@ SELECT:2963 (adj nøyt ub ent) IF
 
 
 #:2762
- SELECT:2762 (det mask) IF
+SELECT:2762 (det mask) IF
 	(0 ub-det)
 	(NOT 0 %noen/ingen%)
+	(1 ub-ent-mask-subst)
+	(NOT 1 ikke-adj-subst)
 	(*1 ub-ent-mask-subst LINK NOT 0 ikke-adj-subst LINK NOT *-1 ikke-adv-adj)
 ;
-#  "en ganske gul bil"))
+#  "en ganske gul bil"))30.6.21 Regelen virket ikke. Sjekker sannsynligvis 0 på veg tilbake fra LINK NOT *-1
 
-
+#:2762
+# SELECT:2762 (det mask) IF
+#	(0 ub-det)
+#	(NOT 0 %noen/ingen%)
+#	(*1 ub-ent-mask-subst BARRIER ikke-adv-adj)
+#	(*1 ub-ent-mask-subst LINK NOT 0 ikke-adj-subst)
+#;
+#30.6.21 "en ganske gul bil". Regelen skrevet på ny måte med BARRIER
 
 #:2763
  SELECT:2763 (det mask) IF
@@ -14195,6 +14233,7 @@ SELECT:2963 (adj nøyt ub ent) IF
 
 #:2605
  SELECT:2605 (pron pers) IF
+ 	(NOT 0 %hen%)
 	(NOT 0 subst-gen)
 	(NOT 0 poss-det)
 	(1 komma/konj)
@@ -14219,6 +14258,7 @@ SELECT:2963 (adj nøyt ub ent) IF
  SELECT:2607 (pron pers) IF
 	(NOT 0 poss-det)
 	(NOT 0 gen)
+	(NOT 0 %hen%)
 	(NOT 0 %henne%)
 	(NOT 0 %en/ei/et%)
 	(NOT 0 interj)
@@ -14959,9 +14999,11 @@ SELECT:2963 (adj nøyt ub ent) IF
 	(NOT 0 fv)
 	(NOT 0 adj)
 	(NOT -1 komma/konj)
-	(**-1C mask-det LINK NOT 0 nr2-det LINK NOT *1 ikke-adv-adj)
+	(**-1C mask-det LINK NOT 0 nr2-det)
+	(**-1C mask-det BARRIER ikke-adv-adj)
 ;
 #  "en vidunderlig vakker sommerfugl"
+# 02.07.21 satt inn BARRIER på ikke-adv-adj
 #      :group 38))
 
 
@@ -18808,8 +18850,9 @@ REMOVE:4090 (verb)
 	(-1C subst)
 	(NOT 1 adj-adv-subst-konj)
 	(NOT *1 overskrift)
-	(*-1 setn-gr LINK NOT **1C pres/pret)
-	(*1 setn-gr LINK NOT **-1C pres/pret)
+	(*1 setn-gr LINK NOT *-1C pres/pret)
+#	(*-1 setn-gr LINK NOT *1C pres/pret)
+	
 ;
 #  "Martin, som Evelyns sønn het (ikke adj)
 # "))
@@ -23869,7 +23912,7 @@ CONSTRAINTS
 "<vår>" SELECT:4043 (det poss) IF
 	(0 subst)
 	(1 nr2-det)
-	(**2 ub-ent-mask/fem-subst BARRIER ikke-adv-adj-det)
+	(**2C ub-ent-mask/fem-subst BARRIER ikke-adv-adj-det)
 ;
 #  "vår egen historie")
 
@@ -23907,7 +23950,7 @@ CONSTRAINTS
 
 #:4013
 "<bare>"  REMOVE:4013 (adj fl) IF
-	(NOT **-1C fl-det BARRIER ikke-adv-adj)
+	(NOT *-1C fl-det BARRIER ikke-adv-adj)
 	(NOT 1 %arm/ben/kropp/legg/tre%-fl)
 ;
 #  de fleste "bare" er ikke adj
@@ -26643,3 +26686,10 @@ SELECT:4081 (adj) IF
 	   (0 bare-adj)
 ;
 
+#:4100
+ REMOVE:4100 (subst) IF
+	   (0 %i%)
+	   (0 prep)
+	   (NOT -1 %en%);
+;
+#i er sjelden subst
