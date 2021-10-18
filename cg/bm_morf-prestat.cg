@@ -2385,6 +2385,7 @@ CONSTRAINTS
 ;
 
 
+
 #:3600
 "<føre>"  SELECT:3600 (subst nøyt ent) IF
 	(-1 adj-nøyt-ub)
@@ -5023,7 +5024,7 @@ CONSTRAINTS
 
 #:3141
 "<verken>"  SELECT:3141 (konj <adv>) IF
-	(*1 %eller% BARRIER)
+	(*1 %eller% BARRIER setn-gr)
 ;
 #  "verken ... eller"))
 
@@ -5369,7 +5370,7 @@ CONSTRAINTS
 
 #:4009
 "<bare>"  REMOVE:4009 (adj fl) IF
-	(NOT **-1C fl-det BARRIER ikke-adv-adj)
+	(NOT *-1C fl-det BARRIER ikke-adv-adj)
 	(NOT *1 fl-subst BARRIER ikke-adv-adj)
 ;
 #  "bare adj i kontekster som: de bare trærne
@@ -5378,7 +5379,7 @@ CONSTRAINTS
 
 #:4012
 "<bare>"  REMOVE:4012 (adj be ent) IF
-	(NOT **-1C det-ent BARRIER ikke-adv-adj)
+	(NOT *-1C det-ent BARRIER ikke-adv-adj)
 ;
 #  "bare adj i kontekster som: det bare treet"))
 
@@ -18827,8 +18828,8 @@ REMOVE:4090 (verb)
 	(-1C subst)
 	(NOT 1 adj-adv-subst-konj)
 	(NOT *1 overskrift)
-	(*-1 setn-gr LINK NOT **1C pres/pret)
-	(*1 setn-gr LINK NOT **-1C pres/pret)
+	(*1 setn-gr LINK NOT *-1C pres/pret)
+#	(*-1 setn-gr LINK NOT *1C pres/pret)
 ;
 #  "Martin, som Evelyns sønn het (ikke adj)
 # "))
@@ -23883,12 +23884,11 @@ CONSTRAINTS
 ;
 
 
-
 #:4043
 "<vår>" SELECT:4043 (det poss) IF
 	(0 subst)
 	(1 nr2-det)
-	(**2 ub-ent-mask/fem-subst BARRIER ikke-adv-adj-det)
+	(**2C ub-ent-mask/fem-subst BARRIER ikke-adv-adj-det)
 ;
 #  "vår egen historie")
 
@@ -23926,7 +23926,7 @@ CONSTRAINTS
 
 #:4013
 "<bare>"  REMOVE:4013 (adj fl) IF
-	(NOT **-1C fl-det BARRIER ikke-adv-adj)
+	(NOT *-1C fl-det BARRIER ikke-adv-adj)
 	(NOT 1 %arm/ben/kropp/legg/tre%-fl)
 ;
 #  de fleste "bare" er ikke adj
