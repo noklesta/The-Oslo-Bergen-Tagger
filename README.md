@@ -6,12 +6,12 @@ For general information about the tagger, visit its home page: <http://www.tekst
 
 Using Docker
 ============
-The easiest way to run the tagger is by using the Docker image found at https://hub.docker.com/r/textlab/obt.
+The easiest way to run the tagger is by using the Docker image found at https://hub.docker.com/r/noklesta/obt.
 The following example pulls version 1.0 of the image from Docker Hub if necessary, mounts the host directory `/tekstlab` 
 as `/texts` inside the Docker container and runs the `tag-bm.sh` command on the file `test.txt` in
 that directory (see 'Running the tagger' below for the different ways to run the tagger):
 
-    docker run -it --rm -v /tekstlab:/texts textlab/obt:1.0 ./tag-bm.sh /texts/test.txt
+    docker run -it --rm -v /tekstlab:/texts noklesta/obt:1.0 ./tag-bm.sh /texts/test.txt
 
 Installation and usage
 ======================
