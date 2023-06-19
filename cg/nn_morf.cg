@@ -1,11 +1,17 @@
 DELIMITERS = "<.>" "<:>" "<!>" "<?>" "<|>" "<$.>" "<$:>" "<$!>" "<$?>" "<$|>";
 
 LIST %-i% = ".*i"r  ;
+LIST %-isk% = ".*isk"r ;
+LIST %-messig% = ".*messig"r ;
+LIST %-saka% = ".*-saka"r ;
+LIST %-sig% = ".*sig"r ;
 LIST %-vis% = ".*vis"r ;
 LIST %-avis% = ".*avis"r ".*vise"r ;
 LIST %-kurs% = ".*kurs"r ;
 LIST %aldri% = "aldri" ;
 LIST %all% = "all" ;
+LIST %all%-fem = ("all" fem) ;
+LIST %all%-mask-fem = ("all" mask) ("all" fem) ;
 LIST %alle% = ("all" det fl) ;
 LIST %aller% = ("aller" adv) ;
 LIST %alt% = ("all" det nøyt) ;
@@ -29,6 +35,7 @@ LIST %att% = "att" ;
 LIST %auga/øyra%-fl = ("auge" fl bu) ("øyre" fl bu) ;
 LIST %av% = "av" ;
 LIST %av/for% = "for" "av" ;
+LIST %bamse% = ("bamse" subst);
 LIST %begge/båe% = "båe" "begge" ;
 LIST %begge/båe/alle% = "båe" "begge" ("all" fl) ;
 LIST %begge/båe/sjølve/alle% = "sjølve" "båe" "begge" ("all" det fl) ;
@@ -42,8 +49,10 @@ LIST %bort/ut% = "ut" "bort" ;
 LIST %brudeparet/paret% = "par" "brudepar" ;
 LIST %bruk% = "bruk" ;
 LIST %da/då% = "då" "da" ;
+LIST %datt% = ("datt" subst) ;
 LIST %dei%-det = ("dei" det) ;
 LIST %dei%-pron = ("dei" pron) ;
+LIST %dei/desse%-pron = ("dei" pron) ("desse" pron) ;
 LIST %del% = "del" ;
 LIST %den% = ("den" det) ;
 LIST %den/denne% = ("den" det) ("denne" det) ;
@@ -55,9 +64,11 @@ LIST %det% = ("det" det) ;
 LIST %det%-pron = ("det" pron) ;
 LIST %det/dette% = ("det" det) ("dette" det) ;
 LIST %det/dette%-pron = ("det" pron) ("dette" pron) ;
+LIST %ditt% = ("ditt" subst) ;
 LIST %då/no/før/frå% = "nå" "no" "før" "frå" "då" "da" ;
 LIST %eg% = "eg" ;
 LIST %ei% = ("ein" det kvant fem eint) ;
+LIST %ei/eit% = ("ein" det kvant fem eint) ("ein" det kvant nøyt eint);
 LIST %eige% = ("eigen" det forst) ;
 LIST %ein% = ("ein" mask) ;
 LIST %ein%-det = ("ein" det) ;
@@ -70,23 +81,28 @@ LIST %eine/einaste% = "eine" "einaste" ;
 LIST %eit% = ("eit" det) ;
 LIST %eksempel% = "eksempel" ;
 LIST %eller% = "eller" ;
+LIST %en%-prep = ("en" prep) ("én" prep) ;
 LIST %enda% = "enda" ;
 LIST %enda/endå% = "endå" "enda" ;
 LIST %enn% = "enn" ;
 LIST %enn%-prep = ("enn" prep) ;
 LIST %etter% = ("etter" prep) ;
 LIST %etter/fram/opp% = ("etter" prep) ("fram" prep) ("opp" prep) ;
+LIST %fall% = ("fall" subst fl) ;
 LIST %famn% = ("famn" subst) ;
 LIST %far% = ("far") ; 
 LIST %fare% = ("fare" verb perf-part) ; 
 LIST %fast% = ("fast" adj) ;
 LIST %fast%-verb = "tjore" "surre" "sette" "setje" "klore" "brenne" "binde" ;
 LIST %fatte/krevje/ta% = ("fatte" verb) ("krevje" verb) ("ta" verb) ;
+LIST %fei% = ("fei" subst);
 LIST %felles% = "felles" ;
 LIST %finne%-verb = ("finne" verb) ;
 LIST %fjære% = "fjære" ;
 LIST %fleire% = ("mange" adj komp) ;
+LIST %fly% = "fly" ;
 LIST %for% = "for" ;
+LIST %for%-adj = ("for" adj);
 LIST %for%-prep = ("for" prep) ;
 LIST %for%-verb = ("fare" verb) ;
 LIST %for/altfor% = "for" "altfor" ;
@@ -103,6 +119,7 @@ LIST %fullt/mange% = "mange" ("full" adj nøyt ub eint) ;
 LIST %fylgje/følgje% = "følgje" "fylgje" ;
 LIST %få% = "få" ;
 LIST %før% = "før" ;
+LIST %før/seinare/heller% = "før" "seinare" "heller" ;
 LIST %før%-adv/%etter%/%etterpå% = "etterpå" "etter" ("før" adv) ;
 LIST %før/etter/rundt/igjennom%-prep = ("før" prep) ("etter" prep) ("rundt" prep) ("igjennom" prep) ;
 LIST %føre% = "føre" ;
@@ -129,21 +146,30 @@ LIST %ha%-pres/pret = ("ha" pres) ("ha" pret) ;
 LIST %ha/få% = "have" "ha" "få" ;
 LIST %halv%-mask/fem = ("halv" adj m/f ub eint) ;
 LIST %halv/kvart%-mask/fem = ("halv" adj m/f ub eint) ("kvart" subst mask ub eint) ("kvart" subst fem ub eint) ;
+LIST %happ% = "happ" ;
+LIST %hast% = ("hast" subst) ;
+LIST %hei% = ("hei" interj) ;
 LIST %heil% = "heil" ;
 LIST %heile% = ("heil" adj bu eint) ("heile" <perf-part>) ;
 LIST %heile%-subst = ("heile" subst) ;
 LIST %heilt% = ("heil" adj nøyt) ;
+LIST %heller% = ("heller" adv) ;
 LIST %heller%-verb = ("helle" pres) ;
 LIST %heller/og/også% = "òg" "også" "ogso" ("heller" adv) ("og" adv) ;
 LIST %helst% = ("helst" adv) ;
 LIST %helvetes% = ("helvete" subst gen) ;
+LIST %hen% = "hen" ;
+LIST %hen-pron% = ("hen" pron) ;
+LIST %hen%-verb = "dra" "drage" "dovne" "døy" "fare" "føre" "gi" "gje" "gjeve" "gå" "komme" "kome" "peike" "smuldre" "sovne" "svinne" "sjukne" "vise" "slokne";
 LIST %hende% = ("hende" verb inf) ;
 LIST %hendt% = ("hende" verb perf-part) ;
 LIST %hit/dit/her/der% = "hit" "her" "dit" "der" ;
 LIST %hogge/sage/kappe/fyre% = ("hogge" verb) ("sage" verb) ("kappe" verb) ("fyre" verb) ;
+LIST %hoppe/over/sitte% = ("hoppe" verb) ("over" prep) ("sitte" verb) ("sitje" verb);
 LIST %hundre/tusen% = "tusen" "hundre" ;
 LIST %hundre/tusen/osv% = "tusen" "par" "million" "milliard" "hundre" ;
 LIST %hytt% = ("hytt" subst) ;
+LIST %hæl% = "hæl" ;
 LIST %høgre/venstre% = "venstre" "høgre" ;
 LIST %høve% = "høve" ;
 LIST %høyre% = "høyre" ;
@@ -170,11 +196,15 @@ LIST %kanskje% = "kanskje" ;
 LIST %kjenne%-perfpart/%omkring% = "omkring" ("kjenne" perf-part) ("kjenne" <perf-part>) ;
 LIST %klokka% = ("klokke" eint bu) ;
 LIST %klokke% = "klokke" ;
+LIST %komme% = ("komme" verb) ("kome" verb);
 LIST %kor% = ("kor" adv) ;
 LIST %korleis% = ("korleis" adv) ;
 LIST %kor/kva% = "kva" "kor" ;
+LIST %kor/kvar% = "kvar" "kor" ;
 LIST %kor/så%-adv = ("kor" adv) ("så" adv) ("so" adv) ;
 LIST %kort/lang/på% = "på" "lang" "kort" ;
+LIST %kost% = ("kost" subst) ;
+LIST %kryss% = ("kryss" subst) ;
 LIST %kva% = "kva" ;
 LIST %kva/mykje% = "mykje" "kva" ;
 LIST %kvar% = "kvar" ;
@@ -189,19 +219,26 @@ LIST %la%-verb = ("la" verb) ;
 LIST %lag% = "lag" ;
 LIST %langt% = ("lang" adj pos nøyt) ;
 LIST %lang% = "lang" ;
+LIST %last% = ("last" subst) ;
 LIST %late/latt% = ("la" perf-part) ;
 LIST %lenge% = ("lenge" adj) ;
 LIST %lenge/snart% = ("lenge" pos) ("snar" nøyt ub eint) ;
 LIST %lenger/lengst% = ("lenge" adj <adv> komp) ("lenge" adj <adv> sup) ;
+LIST %lengst% = ("lang" adj ub sup) ;
 LIST %let% = ("la" verb pres) ("la" verb pret) ;
 LIST %like% = "like" ;
+LIST %lite% = ("liten" adj ub eint) ;
 LIST %litt% = "litt" ;
+LIST %liv% = ("liv" subst appell nøyt) ;
+LIST %lykke% = ("lykke" subst) ;
 LIST %mange% = "mange" ;
 LIST %mange/mangt% = "mange" ("mang" nøyt) ;
+LIST %mask%-fork = ("mask." fork) ("mask" subst ubøy);
 LIST %med% = "med" ;
 LIST %med%-prep = ("med" prep) ;
 LIST %mellom% = "mellom" ;
 LIST %men% = "men" ;
+LIST %menn% = ("mann" ub fl) ;
 LIST %mest/minst% = ("mykje" sup ub) ("liten" sup ub) ;
 LIST %meste% = ("mykje" sup bu) ;
 LIST %meste/minste% = ("mykje" sup bu) ("liten" sup bu) ;
@@ -210,12 +247,15 @@ LIST %minste% = ("liten" sup bu) ;
 LIST %minutt%-ub = ("minutt" ub) ;
 LIST %mot% = ("mot" prep) ;
 LIST %motsett% = "motsett" ;
+LIST %mun% = ("mune" verb pres) ;
 LIST %mye/mykje% = "mykje" "mye" ;
 LIST %mye/mykje/lite% = "mykje" "mye" "lite" ;
 LIST %mye/mykje/lite/litt% = "mykje" "mye" "litt" "lite" ;
 LIST %mye/mykje/lite/mange% = "mykje" "mye" "mange" "lite" ;
+LIST %måte% = ("måte" subst) ;
 LIST %neste% = "neste" ;
 LIST %nei% = "nei" ;
+LIST %niks% = "niks" ;
 LIST %no% = "no" ;
 LIST %no/då/her/der% = ("no" adv) ("nå" adv) ("då" adv) ("da" adv) ("her" prep) ("der" prep) ;
 LIST %no/nå% = "no" ("nå" adv) ;
@@ -229,6 +269,7 @@ LIST %nokon/noen%-mask = ("nokon" mask) ("noen" mask) ;
 LIST %nokon/noen%-nøyt = ("nokon" nøyt) ("noen" nøyt) ;
 LIST %nokon/noen/ingen% = "nokon" "noen" "ingen" ;
 LIST %nokon/noen/noe% = "nokon" "noen" "noe" ;
+LIST %nokon/noen/noe/ingen% = "nokon" "noen" "noe" "ingen" ;
 LIST %norske% = "norske" ;
 LIST %nå% = "nå" ;
 LIST %når% = "når" ;
@@ -255,10 +296,14 @@ LIST %presentere% = "presentere" ;
 LIST %prøve% = "prøve" ;
 LIST %på% = "på" ;
 LIST %på/over% = "på" "over" ;
+LIST %ranke/ride% = ("ranke" subst) ("ride" verb) ;
 LIST %re% = "re" ;
 LIST %redd% = ("redd" adj) ;
 LIST %regel% = "regel" ;
 LIST %rett% = ("rett" adj) ;
+LIST %ride% = ("ride" verb) ;
+LIST %ro% = ("ro" subst fem) ;
+LIST %rubbel% = ("rubbel" subst) ;
 LIST %rundt% = ("rund" adj pos nøyt ub eint) ;
 LIST %saman% = "saman" ;
 LIST %same% = "same" ;
@@ -266,8 +311,11 @@ LIST %same/neste/eine/einaste/førre/forrige% = ("førre" det) ("forrige" det) (
 LIST %same/neste/eine/einaste/sjølve/førre/forrige% = ("sjølve" det) ("førre" det) ("forrige" det) ("same" det) ("neste" det) ("einaste" det) ("eine" det) ;
 LIST %samtidig% = "samtidig" ;
 LIST %samtleg% = "samtleg" ;
+LIST %sann% = "sann" ;
 LIST %seg% = ("seg" pron) ;
+LIST %seg/meg/deg% = ("seg" pron akk) ("eg" pron akk) ("du" pron akk) ;
 LIST %seie% = ("seie" verb) ;
+LIST %seinare% = ("sein" adj komp) ;
 LIST %seng% = "seng" ;
 LIST %sett% = ("sjå" perf-part) ;
 LIST %si% = ("sin" det poss fem eint) ;
@@ -283,8 +331,10 @@ LIST %siste%/ordenstal = "sist" <ordenstal> ;
 LIST %siste/første% = ("sist" bu) ("sist" fl) ("første") ;
 LIST %siste/heile%/ordenstal = "sist" "heil" <ordenstal> ;
 LIST %sitt% = ("sin" det poss nøyt eint) ;
+LIST %sjakk% = "sjakk" ;
 LIST %sjeldan% = "sjeldan" ;
 LIST %sjuande% = "sjuande" ;
+LIST %sjå% = "sjå" ;
 LIST %sjå/høyrast/kjennast% = "sjå" "kjennast" "kjennas" "høyrast" "høyras" "hørast" "høras" ;
 LIST %sjå/rekne/omtale/oppfatte% = "sjå" "rekne" "oppfatte" "omtale" ;
 LIST %sjølv% = "sjølv" "sjøl" "sjæl" ;
@@ -294,12 +344,15 @@ LIST %sjølve% = "sjølve" ;
 LIST %skal% = "skal" ;
 LIST %skapt% = ("skape" adj <perf-part>) ;
 LIST %skifte/bytte% = ("skifte" verb) ("bytte" verb) ;
+LIST %sko/støvel/støvlett% = "sko" "støvel" "støvlett" <+sko> <+støvel> <+støvlett> ;
+LIST %skrevs% = ("skrevs" adv) ;
 LIST %skritt/steg% = "stykke" "steg" "skritt" ;
 LIST %slags% = "slags" ;
 LIST %slik% = "slik" ;
 LIST %slik%-adv = ("slik" adv) ;
 LIST %slutt% = ("slutt" subst mask) ;
 LIST %slå% = "slå" ;
+LIST %smule% = "smule" ;
 LIST %som% = "som" ;
 LIST %som%-prep = ("som" prep) ;
 LIST %som%-sbu = ("som" sbu) ;
@@ -313,9 +366,13 @@ LIST %spørje% = "spørje" ;
 LIST %stad/plass% = "stad" "plass" ;
 LIST %stand% = "stand" ;
 LIST %stikk% = ("stikk" adv) ;
+LIST %stopp% = ("stoppe" imp) ;
+LIST %store% = ("stor" adj fl);
 LIST %stykke% = "stykke" ;
+LIST %sus% = "sus" ;
 LIST %synge% = "synge" ;
 LIST %så% = "så" ;
+LIST %så/so% = "så" "so" ;
 LIST %så%-adv = ("så" adv) ;
 LIST %så/for% = "så" "for" ;
 LIST %så/ganske% = "så" "ganske" ;
@@ -331,15 +388,18 @@ LIST %til% = "til" ;
 LIST %til/på% = "til" "på";
 LIST %to% = ("to" det) ;
 LIST %trass% = ("trass" prep) ;
+LIST %tru% = ("tru" verb) ;
 LIST %tvers% = "tvers" ;
 LIST %tvert% = "tvert" ;
 LIST %tygge/spytte% = "tygge" "spytte" ;
 LIST %ut% = "ut" ;
 LIST %utan% = "utan" ;
+LIST %ute% = "ute" ;
 LIST %utføre% = "utføre" ;
 LIST %vand% = "vand" ;
 LIST %vanleg% = ("vanleg" eint) ;
 LIST %var% = ("var" adj) ("vere" pret) ;
+LIST %vask% = ("vask" subst) ;
 LIST %ve% = ("ve" subst) ;
 LIST %ved% = ("ved" prep) ;
 LIST %vel% = "vel" ;
@@ -351,9 +411,10 @@ LIST %vere/verte/bli% = "verte" "vere" "bli" ;
 LIST %vere/verte/bli%-fin = ("vere" pres) ("vere" pret) ("verte" pres) ("verte" pret) ("bli" pres) ("bli" pret) ;
 LIST %verke% = "verke" ;
 LIST %vidare% = ("vid" adj komp) ;
+LIST %vidt% = ("vid" adj nøyt ub eint pos) ;
 LIST %vise% = ("vise" verb) ;
 LIST %viss% = "viss" ;
-LIST %visst%-nøyt = ("visst" adj pos nøyt);
+LIST %visst%-nøyt = ("visst" adj pos nøyt) ;
 LIST %øre% = "øre" ;
 LIST %år% = "år" ;
 LIST %åt% = ("åt") ;
@@ -367,8 +428,6 @@ LIST <perf-part>-nøyt-eint = (<perf-part> nøyt eint) ;
 LIST <pres-part> = <pres-part> ;
 LIST <trans> = tr10 tr11 tr14 tr16 tr17 tr18 tr19 tr1 tr2 tr3 tr4 tr5 tr6 tr7 tr8 tr9 ;
 LIST >>> = >>> ;
-LIST @adv = @adv ;
-LIST @tittel = @tittel ;
 LIST adj = adj ;
 LIST adj-adv-subst-konj = adv adj subst konj ;
 LIST adj-bu = (adj bu) (adj <pres-part>) ;
@@ -511,18 +570,18 @@ LIST ellipse = ("$--" <strek>) <ellipse> ;
 LIST etternamn = "United" "Times" "Idrettslag" "City" "Blad" ;
 LIST f-subj = ("det" pron) ;
 LIST farger = "turkis" "svart" "rosa" "raud" "oransje" "lilla" "kvit" "indigo" "gul" "grøn" "grå" "fiolett" "blå" ;
-LIST farlege-adj = "reine" "ære" "året" "vite" "vis" "vind" "vete" "ulike" "timen" "stått" "ser" "måte" "like" "høve" "helle" "gjer" "førebels" "før" "fest" "fedrane" "ete" "eine" "eige" "bli" "berr" "berr" "annen" "annan" "ale" det ("nytt" subst) ("bygd" subst fem) ("var" adj pos nøyt) ;
+LIST farlege-adj = "for" "reine" "ære" "året" "vite" "vis" "vind" "vete" "ulike" "timen" "stått" "ser" "måte" "like" "høve" "helle" "gjer" "førebels" "før" "fest" "fedrane" "ete" "eine" "eige" "bli" "berr" "berr" "annen" "annan" "ale" det ("nytt" subst) ("bygd" subst fem) ("var" adj pos nøyt) ;
 LIST farlege-adj-subst = "farg" "venstre" "tunge" "slage" "skrå" "skarp" "rett" "ny" "låg" "like" "lik" "lang" "kvalm" "høy" "helt" "helt" "heller" "heile" "gode" "fare" (adj komp) ("godt" subst) ("beste" subst) ("visse" subst) ("direkte" subst) ("sivil" subst) ("absolutt" subst) ("konkret" subst) ("sett" nøyt) ("halv" ubøy) ("var" subst ub) ("lit" eint bu) ("middel" gen) ("al" fl bu) ;
 LIST farlege-fem-subst = ("ho" eint ub gen) ("beste" eint ub) ("låg" eint ub) ("or" eint) ("eige" eint bu) ("å" eint ub) ("vorte" eint ub) ("ho" eint ub) ;
 LIST farlege-fl-subst = ("farg" subst nøyt fl bu) ("gode" subst nøyt fl ub) ("beste" nøyt fl ub) ("vonde" fl ub) ("tyde" fl ub) ("finn" fl ub) ("tre" fl ub) ("finne" fl ub) ("komme" fl ub) ("under" fl ub) ("får" fl) ("slag" gen) ("eg" fl) ("lo" fl) ("var" fl) ("al" fl bu) ("nå" fl) ("sett" fl) ("mot" fl ub) ("men" fl ub) ("godt" ub) ("godt" bu) ("sjølv" ub) ("no" ub) ("stygge" ub) ("skal" fl) ;
-LIST farlege-forledd-verb = ("snerte" verb pret) ("åre" pret) ("velje" pres) ("fare" pret) ("nå" pres) ("elle" pres) ("fø" pres) ("sitje" pres) ("sitte" pres) ("helle" pres) ("slett" pres) ("kontre" pret) ("sette" pres) ;
+LIST farlege-forledd-verb = ".*saka"r ("snerte" verb pret) ("åre" pret) ("velje" pres) ("fare" pret) ("nå" pres) ("elle" pres) ("fø" pres) ("sitje" pres) ("sitte" pres) ("helle" pres) ("slett" pres) ("kontre" pret) ("sette" pres) ;
 LIST farlege-imp = "jazze" "opptake" "visse" "velje" "vede" "vare" "uffe" "så" "skale" "same" "nå" "neie" "mine" "kvare" "hurre" "hare" "hanse" "gode" "føre" "eine" "betre" ;
 LIST farlege-inf = "ferje" "ære" "dekke" "visse" "unne" "tre" "så" "støtte" "spanne" "slike" "skule" "skade" "same" "sake" "pose" "nå" "nye" "norske" "neve" "neste" "neppe" "møte" "mykje" "løyve" "lite" "like" "lette" "lekre" "kyrkje" "kjede" "jorde" "høve" "heime" "heile" "glede" "gjorde" "følgje" "friske" "fri" "fjerne" "eine" "eigne" "døme" "dette" "betre" "anne" "djupe" ("hende" adv) ("slette" gen) ("elle" gen) ("felle" gen) ;
 LIST farlege-mask-subst = "ville" "ved" "skrå" "like" "helt" "heller" "eldste" ("beste" eint ub) ("or" eint) ("å" eint ub) ("fyrste" eint ub) ("gule" eint ub) ("vert" eint ub) ("lit" eint bu) ("middel" gen) ("alt" eint ub) ("mens" eint ub) ;
 LIST farlege-nøyt-subst = "vilt" "venstre" "var" "under" "skrå" "skal" "sjølv" "sett" "positiv" "nå" "ny" "mot" "lik" "konkret" "høgre" "godt" "gode" "folk" "bak" ("beste" eint ub) ("stikk" adv) ("gjeld" ub) ("or" ub) ("no" ub) ("skjer" ub) ("kor" ub) ("eige" ub) ("rikt" ub) ("fort" ub) ("slag" gen) ("eg" eint) ("lo" fl) ("al" fl bu) ("middel" gen) ("men" eint ub) ("men" fl ub) ("tre" ub) ("trass" ub) ;
-LIST farlege-part = "åre" "vå" "vogge" "vite" "ville" "vete" "venne" "vekkje" "vekke" "tørste" "trøyste" "tale" "svare" "spenne" "spanne" "slikje" "slike" "slette" "skulde" "sitte" "sitje" "semje" "sake" "rynje" "rikje" "rike" "rette" "pule" "prime" "oppta" "omvende" "nære" "namne" "minnast" "lyse" "love" "lite" "lengjast" "lengast" "le" "kontre" "klokke" "klare" "jorde" "høgje" "hende" "helse" "helle" "grå" "greie" "gale" "fri" "felle" "fare" "ende" "elje" "desidere" "brå" "beste" "ause" "anne" "ale" gen <ordenstal> ("vinne" subst) ("bygd" subst fem) ("var" adj pos nøyt) ("pult" subst mask) ;
+LIST farlege-part = "date" "åre" "vå" "vogge" "vite" "ville" "vete" "venne" "vekkje" "vekke" "tørste" "trøyste" "tale" "svare" "spenne" "spanne" "slikje" "slike" "slette" "skulde" "sitte" "sitje" "semje" "sake" "rynje" "rikje" "rike" "rette" "pule" "prime" "oppta" "omvende" "nære" "namne" "minnast" "lyse" "love" "lite" "lengjast" "lengast" "le" "kontre" "klokke" "klare" "jorde" "høgje" "hende" "helse" "helle" "grå" "greie" "gale" "fri" "felle" "fare" "ende" "elje" "desidere" "brå" "beste" "ause" "anne" "ale" gen <ordenstal> ("vinne" subst) ("bygd" subst fem) ("var" adj pos nøyt) ("pult" subst mask) ;
 LIST farlege-prep = "van" ;
-LIST farlege-verb = "late" "la" ("bile" pres) ("sva" pres) ("keise" pres) ("beste" pret) ("venne" verb pret) ("liste" verb pret) ("venne" pres) ("rose" pres) ("toske" pres) ("øye" pres) ("dykke" pres) ("børse" pret) ("vege" pres) ("slute" pret) ("hå" pres) ("godte" pret) ("kan" adv) ("stie" pres) ("bøke" pres) ("senge" pret) ("rine" pret) ("neste" pret) ("deke" pres) ("ete" pret) ("anne" pret) ("grade" pres) ("åre" pret) ("kontre" pret) ("slette" pres) ("velje" pres) ("fare" pret) ("sitje" pres) ("sitte" pres) ("sette" pres) ("nå" pres) ("elle" pres) ("fø" pres) ("helle" pres) ("dy" pres) ("dage" pres) ("vå" pres) ("vinde" pres) ("snerte" pret) ("jorde" pret) ("ry" pret) ("rynje" pret) ("kagge" pres) ("kroppe" verb pres) ("åte" pret) ("hurre" pret) ("marke" pret);
+LIST farlege-verb = ".*saka"r "late" "la" ("bile" pres) ("date" pret) ("sva" pres) ("keise" pres) ("beste" pret) ("venne" verb pret) ("liste" verb pret) ("venne" pres) ("rose" pres) ("toske" pres) ("øye" pres) ("dykke" pres) ("børse" pret) ("vege" pres) ("slute" pret) ("hå" pres) ("godte" pret) ("kan" adv) ("stie" pres) ("bøke" pres) ("senge" pret) ("rine" pret) ("neste" pret) ("deke" pres) ("ete" pret) ("anne" pret) ("grade" pres) ("åre" pret) ("kontre" pret) ("slette" pres) ("velje" pres) ("fare" pret) ("sitje" pres) ("sitte" pres) ("sette" pres) ("nå" pres) ("elle" pres) ("fø" pres) ("helle" pres) ("dy" pres) ("dage" pres) ("vå" pres) ("vinde" pres) ("snerte" pret) ("jorde" pret) ("ry" pret) ("rynje" pret) ("kagge" pres) ("kroppe" verb pres) ("åte" pret) ("hurre" pret) ("marke" pret);
 LIST fem = fem m/f (adj bu) ;
 LIST fem-bu = (fem bu) ;
 LIST fem-det = (det fem) ;
@@ -622,7 +681,7 @@ LIST ikkje-adv-pron = "sidan" "$," verb prep sbu konj inf-merke interj subst det
 LIST ikkje-adv-pron-prep = "sidan" "$," verb sbu konj inf-merke interj subst det <ellipse> (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj komp) (adj sup) (adj <pres-part>) ;
 LIST ikkje-adv-subst-pron-konj = "sidan" det verb prep sbu interj <ellipse> (det dem) (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj <pres-part>) (subst gen) ("$,") (clb konj) ;
 LIST ikkje-adv-subst-pron-konj-det = "sidan" verb prep sbu interj <ellipse> (det dem) (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj <pres-part>) (subst gen) ("$," clb) (clb konj) ;
-LIST ikkje-adv-subst-pron-konj-det-verb = "sidan" prep sbu interj <ellipse> (det dem) (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj <pres-part>) (subst gen) ("$," clb) (clb konj) @adv ;
+LIST ikkje-adv-subst-pron-konj-det-verb = "sidan" prep sbu interj <ellipse> (det dem) (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj <pres-part>) (subst gen) ("$," clb) (clb konj) adv <adv>;
 LIST ikkje-adv-verb = "sidan" "$," prep pron sbu konj inf-merke interj subst det <ellipse> (adj mask) (adj fem) (adj m/f) (adj bu) (adj fl) (adj komp) (adj sup) (adj <pres-part>) ;
 LIST ikkje-denne-np = "sidan" "$-" verb prep pron sbu inf-merke det interj <<< ;
 LIST ikkje-det = verb prep pron sbu konj inf-merke subst interj adj adv ;
@@ -656,6 +715,7 @@ LIST ikkje-verb-adj-adv = det prep pron sbu konj inf-merke subst interj ;
 LIST imp = imp ;
 LIST inf = inf ;
 LIST inf/pres = (verb inf pres) ;
+LIST inf/perf-part = (verb inf) (verb perf-part);
 LIST infmerke = inf-merke ;
 LIST int-setn-gr = "kvifor" "korleis" "korfor" "$-" sbu ("koss" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("kor" adv) ("$;" clb) (clb konj) (clb <komma>) ;
 LIST interj = interj ;
@@ -714,7 +774,7 @@ LIST mask/fem/nøyt/fl = mask fem m/f nøyt fl ;
 LIST mest-sanns-adj-istf-subst = "vorte" "venstre" "snille" "reine" "mjuke" "lang" "klare" "høgre" "flott" ("ville" subst) "velkomen" "velkommen";
 LIST mest-sanns-adj-istf-verb = "rine" ;
 LIST mest-sanns-pos-istf-<perf-part> = "våt" "vite" "vaksen" "utsett" "tørst" "trøytt" "trøtt" "trygg" "tett" "svart" "super" "stygg" "stri" "stolt" "stille" "slutt" "sliten" "skitten" "skalla" "sinna" "rik" "rett" "oppteken" "nøydd" "nøgd" "mørke" "motsett" "lyde" "lite" "lik" "lett" "klar"  "javisst" "ill" "høg" "huga" "heit" "gale" "fæl" "fri" "fortenkt" "forbanna" "flust" "brå" "betatt" ;
-LIST mest-sanns-subst-istf-adj = "året" "timen" "tid" "skyld" "makt" "lo" "folket" ("flaske" <perf-part>) ("live" <perf-part>) ("kute" adj <perf-part>) ("saka" adj) ("sake" adj <perf-part>) ("åre" adj <perf-part>) ("lyd" mask fem ub eint) ("høv" bu) ;
+LIST mest-sanns-subst-istf-adj = "vege" "måte" "året" "timen" "tid" "skyld" "makt" "lo" "folket" ("flaske" <perf-part>) ("live" <perf-part>) ("kute" adj <perf-part>) ("saka" adj) ("sake" adj <perf-part>) ("åre" adj <perf-part>) ("lyd" mask fem ub eint) ("høv" bu) ;
 LIST mest-sanns-subst-istf-verb = "sti" "kagge" ;
 LIST mest-sanns-verb-istf-subst = ("ta" verb pret) ("take" verb pret) ("blåse" verb pret) ;
 LIST målsubst = "tonnkilometer" "sneis" "sjømil" "sekundmeter" "prosent" "nanometer" "millimeter" "milliliter" "milligram" "mil" "mikrometer" "meter" "liter" "kvartmil" "kvartliter" "kvadratmillimeter" "kvadratmeter" "kvadratkilometer" "kvadratdesimeter" "kvadratcentimeter" "kubikkmillimeter" "kubikkmeter" "kubikkdesimeter" "kubikkcentimeter" "kilometer" "kilogram" "kilo" "hektoliter" "hektogram" "halvmil" "halvmeter" "halvliter" "halvkilo" "gram" "dusin" "desimeter" "desiliter" "desigram" "dekaliter" "centimeter" "centiliter" "centigram" ("gong" fl) ;
@@ -723,22 +783,22 @@ LIST månad/høgtid/årstid = "vinter" "sumar" "sommer" "september" "påske" "pi
 LIST månad/høgtid/årstid/tidssubst = "vinter" "sumar" "sommer" "september" "påske" "pinse" "oktober" "november" "mars" "mai" "juni" "juli" "jul" "januar" "haust" "februar" "desember" "august" "april" ("vår" subst) ("tid" eint bu) ("tidsrom" eint bu) ("periode" eint bu) ;
 LIST neg-adv = "neppe" "ikkje" "aldri" ;
 LIST nom = subst adj pron det ;
-LIST nom-eint = (subst eint) ("all" eint) ("mang" eint) ("De" nom) ("han" nom) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("det" pron) ("dette" pron) ;
-LIST nom-fem-eint = (subst fem eint) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
-LIST nom-fem-eint/%ei% = (subst fem eint) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" fem) ;
-LIST nom-fem-eint/prop = (subst fem eint) (subst fem prop) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
+LIST nom-eint = (subst eint) ("all" eint) ("mang" eint) ("De" pron) ("han" pron) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("det" pron) ("dette" pron) ;
+LIST nom-fem-eint = (subst fem eint) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
+LIST nom-fem-eint/%ei% = (subst fem eint) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" fem) ;
+LIST nom-fem-eint/prop = (subst fem eint) (subst fem prop) ("mang" det fem) ("all" det fem) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
 LIST nom-fl = "vi" "me" "desse" "dei" "de" (subst fl) ("all" det fl) ("ingen" det fl) ("nokre" pron) ;
-LIST nom-mask-eint = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" nom) ("han" nom) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
-LIST nom-mask-eint/%ein% = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" nom) ("han" nom) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" mask) ;
-LIST nom-mask-eint/prop = (subst mask eint) (subst mask prop) ("mang" det mask) ("all" det mask) ("De" nom) ("han" nom) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
-LIST nom-reinmask-eint/prop = (subst mask eint) (subst mask prop) ("mang" det mask) ("all" det mask) ("han" nom) ("ein" pron) ("nokon" pron) ;
-LIST nom-mask/fem-eint/%ein/ei% = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" nom) ("han" nom) ("eg" nom) ("ho" nom) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" mask) ("ein" fem) (subst fem eint) ("mang" det fem) ("all" det fem) ;
+LIST nom-mask-eint = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" pron) ("han" pron) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
+LIST nom-mask-eint/%ein% = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" pron) ("han" pron) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" mask) ;
+LIST nom-mask-eint/prop = (subst mask eint) (subst mask prop) ("mang" det mask) ("all" det mask) ("De" pron) ("han" pron) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ;
+LIST nom-reinmask-eint/prop = (subst mask eint) (subst mask prop) ("mang" det mask) ("all" det mask) ("han" pron) ("ein" pron) ("nokon" pron) ;
+LIST nom-mask/fem-eint/%ein/ei% = (subst mask eint) ("mang" det mask) ("all" det mask) ("De" pron) ("han" pron) ("eg" nom) ("ho" pron) ("du" nom) ("den" pron) ("denne" pron) ("ein" pron) ("nokon" pron) ("ein" mask) ("ein" fem) (subst fem eint) ("mang" det fem) ("all" det fem) ;
 LIST nom-nøyt-eint = (subst nøyt eint) ("mang" det nøyt) ("all" det nøyt) ("det" pron) ("dette" pron) ("noko" pron) ;
 LIST nom-nøyt-eint/%eit% = (subst nøyt eint) ("mang" det nøyt) ("all" det nøyt) ("det" pron) ("dette" pron) ("noko" pron) ("ein" pron) ("ein" nøyt) ;
 LIST nom-nøyt-eint/prop = (subst nøyt eint) (subst nøyt prop) ("mang" det nøyt) ("all" det nøyt) ("det" pron) ("dette" pron) ("noko" pron) ;
 LIST nom-sbu = subst adj pron det sbu ;
 LIST nom/adv = subst adj pron det adv ;
-LIST nom/akk-pron = "ho" "han" "eg" "du" "dei" "de" ;
+LIST nom/akk-pron = "eg" "du" "de" "ho" "han" "dei" "dokker" ;
 LIST nom/at = ("at" sbu) subst adj pron det ;
 LIST nom/perf-part = subst adj pron det perf-part ;
 LIST nom/prep = (prep) subst adj pron det ;
@@ -818,7 +878,6 @@ LIST prep-intrans/adv = "utanfrå" "utafrå" "inne" "iblant" "hit" "herifrå" "h
 LIST prep-tal = "sidan" prep (det kvant) ;
 LIST prep/%saman% = "saman" prep ;
 LIST prep/%som% = "som" prep ;
-LIST prep/@adv = @adv prep ;
 LIST prep/adv = "sidan" prep adv (adj <adv>) (adj nøyt ub eint) ;
 LIST prep/komma = prep ("$," <komma>) ;
 LIST prep/pron/%som% = "som" prep pron ;
@@ -833,11 +892,12 @@ LIST present-verb = "vere" "stå" "liggje" "kome" "hengje" "henge" ;
 LIST pret = pret ;
 LIST pron = pron ;
 LIST pron-akk = "seg" (pron pers akk) ;
-LIST pron-akk-fl = ("vi" akk) ("me" akk) ("dei" akk) ("de" akk) ("desse" pron) ;
-LIST pron-akk-mask/fem = ("De" akk) ("han" akk) ("eg" akk) ("ho" akk) ("du" akk) ("den" pron) ("denne" pron) ;
-LIST pron-akk-mfn/fl = "seg" ("De" akk) ("han" akk) ("eg" akk) ("ho" akk) ("du" akk) ("den" pron) ("denne" pron) ("vi" akk) ("me" akk) ("de" akk) ("dykk" akk) ("desse" pron) ("det" pron) ("dette" pron) ;
-LIST pron-nom = (pron pers nom) ;
-LIST pron-nom/%seg% = (pron pers nom) ("seg" pron) ;
+LIST pron-akk-fl = ("vi" akk) ("me" akk) ("dei" pron) ("de" akk) ("desse" pron) ;
+LIST pron-akk-mask/fem = ("De" akk) ("han" pron) ("eg" akk) ("ho" pron) ("du" akk) ("den" pron) ("denne" pron) ;
+LIST pron-akk-mfn/fl = "seg" ("De" akk) ("han" pron) ("eg" akk) ("ho" pron) ("du" akk) ("den" pron) ("denne" pron) ("vi" akk) ("me" akk) ("de" akk) ("dykk" akk) ("desse" pron) ("det" pron) ("dette" pron) ;
+LIST pron-akk/subst = (pron pers akk) subst;
+LIST pron-nom = (pron pers nom) ; 
+LIST pron-nom/%seg% = (pron pers nom) ("seg" pron) ;  
 LIST pron-pers = (pron pers) ;
 LIST pron-r = "seg" "kvarandre" ;
 LIST pron/bu-subst/prop = pron (subst bu) prop ;
@@ -846,6 +906,7 @@ LIST prop-det-eint = ("Det" subst prop) ("Den" subst prop) ;
 LIST prop/%du% = "du" prop ;
 LIST prop/hum-pron = prop (pron pers hum) (pron pers mask) (pron pers fem) (pron pers 1) (pron pers 2) (pron pers fl) ;
 LIST prop/ub-eint-subst = prop (subst eint ub) (subst ubøy) ;
+LIST punktum = "$." ;
 LIST refl = rl1 rl2 rl3 rl4 rl5 rl6 rl7 rl8 rl9 rl10 rl11 rl12 rl13 rl14 rl15 rl16 rl17 rl18 rl19 rl20 ;
 LIST replikk = "$¦" "$;" "$:" "$--" "$-" "$\"" >>> <<< ;
 LIST replikk-u-setnst = "$¦" "$?" "$;" "$:" "$--" "$-" "$\"" "$!" ;
@@ -855,7 +916,7 @@ LIST retning = "vest" "sør" "nord" "aust" ;
 LIST s-gr = "$;" "$:" "$..." "$--" "$-" "$," "$\"" konj >>> <<< ;
 LIST s-gr/interj = "$;" "$:" "$..." "$--" "$-" "$," "$\"" interj >>> <<< ;
 LIST same/annan/eigen = ("same" det) ("annen" det) ("annan" det) ("eigen" det) ;
-LIST samset = samset ;
+LIST samset = samset-analyse ;
 LIST sanns-adv = "vel" "så" "sjølv" "like" "kor" "for" "endå" "enda" ;
 LIST sanseverb = "sjå" "merke" "late" "la" "kjenne" "høyre" "høre" "føle" "be" ;
 LIST sbu = "kva" sbu ("kor" adv) ("kvar" adv) ;
@@ -865,17 +926,17 @@ LIST sbu/infmerke = sbu inf-merke ;
 LIST sbu/konj = sbu konj ;
 LIST sbu/sp = "kvifor" "kvar" "korleis" "korfor" "kor" sbu ;
 LIST seier-verb = "takke" "åtvare" "tenkje" "tenke" "svare" "sukke" "spørje" "skrive" "seie" "rope" "mumle" "meine" "låte" "kviskre" "hyle" "fortelje" "(\"la\" verb pret) = <let> uten ` som det eigentleg burde ga vore, dvs pret av låte " ("la" verb pret) ;
-LIST setn-gr = "kvifor" "korleis" "$--" "$-" sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) "<.>" "<:>" "<!>" "<?>" "<|>" "<$.>" "<$:>" "<$!>" "<$?>" "<$|>";
-LIST setn-gr-u-komma = "kvifor" "korleis" "korfor" "$--" "$-" sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) ;
+LIST setn-gr = "kvifor" "korleis" "$--" "$-" sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) "<.>" "<:>" "<!>" "<?>" "<|>" "<$.>" "<$:>" "<$!>" "<$?>" "<$|>";
+LIST setn-gr-u-komma = "kvifor" "korleis" "korfor" "$--" "$-" sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) ;
 LIST setn-gr-u-sbu = "kvifor" "korleis" "korfor" "$--" "$-" "$!" >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) clb ;
-LIST setn-gr-u-strek = "kvifor" "korleis" "korfor" sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
-LIST setn-gr/infmerke = "kvifor" "korleis" "korfor" "$--" "$-" inf-merke sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
-LIST setn-gr/parentes-beg = "kvifor" "korleis" "korfor" "$--" "$-" <parentes-beg> sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
-LIST setn-gr/prep = "kvifor" "korleis" "korfor" "$--" "$-" prep sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
-LIST setn-gr/verb = "kvifor" "korleis" "korfor" "$--" "$-" verb sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn-gr-u-strek = "kvifor" "korleis" "korfor" sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn-gr/infmerke = "kvifor" "korleis" "korfor" "$--" "$-" inf-merke sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn-gr/parentes-beg = "kvifor" "korleis" "korfor" "$--" "$-" <parentes-beg> sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn-gr/prep = "kvifor" "korleis" "korfor" "$--" "$-" prep sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn-gr/verb = "kvifor" "korleis" "korfor" "$--" "$-" verb sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
 LIST setn-slutt/fin-verb = <<< clb (verb pres) (verb pret) ;
 LIST setn/infkonstr-gr = "kvifor" "kvar" "kva" "korleis" "korfor" "kor" inf-merke sbu >>> <<< ("$-" clb) ("$;" clb) (clb konj) (clb <komma>) ;
-LIST setn/infkonstr-gr/verb = "kvifor" "korleis" "$--" "$-" verb inf-merke sbu @sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
+LIST setn/infkonstr-gr/verb = "kvifor" "korleis" "$--" "$-" verb inf-merke sbu >>> <<< ("koss" adv) ("kor" adv) ("kvar" adv) ("kven" pron sp) ("kva" pron sp) ("$:" clb) ("$;" clb) (clb konj) (clb <komma>) ;
 LIST setningsadv = "òg" "vonleg" "visstnok" "visselig" "visseleg" "ventelig" "venteleg" "vanligvis" "vanlegvis" "unektelig" "unekteleg" "uheldigvis" "tydeligvis" "tydelegvis" "trulig" "truleg" "tilfeldigvis" "sogar" "so" "sluttelig" "slutteleg" "simpelthen" "sannsynligvis" "sannsynlegvis" "sannelig" "sanneleg" "saktens" "rimeligvis" "rimelegvis" "riktignok" "også" "ofte" "nødvendigvis" "no" "nesten" "neppe" "nemlig" "nemleg" "naturligvis" "naturlegvis" "muligvis" "muligens" "mulegvis" "mogligvis" "moglegvis" "mogeligvis" "mogelegvis" "lykkeligvis" "lykkelegvis" "lukkeligvis" "lukkeligvis" "liksom" "klokelig" "klokeleg" "kanskje" "jo" "jamvel" "jammen" "især" "imidlertid" "ikkje" "heldigvis" "gudskjelov" "gledeligvis" "gledelegvis" "følgjeleg" "følgelig" "fortrinnsvis" "forresten" "fornuftigvis" "formodentlig" "formodentleg" "formelig" "formeleg" "forhåpentligvis" "forhåpentlegvis" "elles" "eksempelvis" "dog" "dessverre" "dessutan" "berre" "beklageligvis" "antakelig" "antakeleg" "altså" "alltid" "aldri" ("kan" adv) ("hende" adv) ("nok" adv) ("nå" adv) ("så" adv) ("da" adv) ("då" adv) ("brå" adj pos nøyt ub eint) ("sjølvsagd" adj pos nøyt ub ein) ("sjølvsagt" adj pos nøyt ub ein);
 LIST sitatverb = "åtvare" "understreke" "truge" "true" "tru" "tenkje" "svare" "sukke" "smile" "skrive" "seie" "rope" "replisere" "påpeike" "presisere" "presisere" "opplyse" "oppfordre" "mumle" "meine" "love" "le" "kviskre" "konkludere" "hyle" "hevde" "glise" "gjenta" "gaule" "fortelje" "forklare" "flire" "fastslå" "erkjenne" "byrje" "begynne" "be" "avslutte" ;
 LIST skipsmengde = "trosse" "tofte" "skip" "segl" "ror" "rekkje" "ombord" "matros" "lugar" "livbåt" "lekter" "forut" "forut" "bøye" "båt" "baug" "babord" ;
@@ -943,7 +1004,7 @@ LIST tidsadv = "tidlig" "tidleg" "sein" "nå" "no" "lenge" "igjen" "før" "etter
 LIST tidsadvsubst-nr1 = "tysdag" "torsdag" "søndag" "sundag" "september" "onsdag" "oktober" "november" "måndag" "mars" "mai" "laurdag" "juni" "juli" "januar" "fredag" "februar" "desember" "august" "april" ;
 LIST tidsadvsubst-nr2 = "natt" "månad" "morgon" "kveld" "føremiddag" "formiddag" "ettermiddag" ;
 LIST tidssubst = "år" "veke" "time" "tidelssekund" "tiandelssekund" "sekund" "nanosekund" "månad" "minutt" "millisekund" "hundredelssekund" "halvår" "døgn" "dag" ;
-LIST tittel = <tittel> @tittel ;
+LIST tittel = <tittel> ;
 LIST tr1/tr4-10/tr14/dtr1-9/refl/pr1/pr3-10/adv2/adv6-11/adv13-14/kaus = tr1 tr4 tr5 tr6 tr7 tr8 tr9 tr10 tr14 d1 d2 d3 d4 d5 d6 d7 d8 d9 rl1 rl2 rl3 rl4 rl5 rl6 rl7 rl8 rl9 rl10 rl11 rl12 rl13 rl14 rl15 rl16 rl17 rl18 rl19 pr1 pr3 pr4 pr5 pr6 pr7 pr8 pr9 pr10 a2 a6 a7 a8 a9 a10 a11 a13 a14 k1 k2 ;
 LIST trans-med-nom = tr1 tr4 tr5 tr6 tr7 tr8 tr9 tr10 d1 d2 d3 d4 ;
 LIST trans-uprep = tr10 tr14 tr16 tr17 tr18 tr19 tr1 tr2 tr3 tr4 tr5 tr6 tr7 tr8 tr9 tr d1 d2 d3 d7 rl1 rl2 rl3 rl4 rl5 rl6 rl7 rl8 rl9 rl10 rl11 rl12 rl15 rl16 rl17 rl18 rl19 pr1 pr1 pr2 pr3 pr4 pr5 pr6 pr7 pr8 pr9 pr10 pa1 pa2 pa3 a2 a6 a7 a8 a9 a10 a11 a13 a14 ;
@@ -1026,6 +1087,7 @@ LIST veldig-farlege-part = "jorde" "lite" "pule" "prime" "oppta" "rikje" "rike" 
 LIST veldig-farlege-verb = ("børse" pret) ("slute" pret) ("hå" pres) ("stie" pres) ("bøke" pres) ("senge" pret) ("rine" pret) ("deke" pres) ("anne" pret) ("grade" pres) ("kontre" pret) ("slette" pres) ("sitje" pres) ("sitte" pres) ("elle" pres) ("dy" pres) ("dage" pres) ("vå" pres) ("vinde" pres) ("snerte" pret) ("jorde" pret) ("ry" pret) ("rynje" pret) ;
 LIST verb = verb ;
 LIST verb-u-imp = (verb pres) (verb pret) (verb perf-part) (verb inf) ;
+LIST verb/adj = verb adj ;
 LIST verb/adj-perf-part = verb (adj <perf-part>) ;
 LIST verb/parentes-beg = verb <parentes-beg> ;
 LIST verb/parentes-slutt = verb <parentes-slutt> ;
@@ -1081,6 +1143,98 @@ CONSTRAINTS
 	(*-1 fv BARRIER setn-gr)
 	(*-1 skipsmengde BARRIER setn-gr)
 ;
+
+
+#:6576
+"<alle>" SELECT:6576 (det kvant fl) IF
+	(-1 %i%)
+	(1 %fall%)
+;
+
+
+#:6624
+"<alt>"  SELECT:6624 (pron) IF
+	(1C pres/pret)
+	(NOT -1 %som%)
+	(NOT -1 nom)
+	(2 ub-eint-nøyt-adj)
+;
+#  "alt var velgjort"))
+#
+
+
+#:6625
+"<alt>"  SELECT:6625 (pron) IF
+	(1C pres/pret)
+	(NOT -1 %som%)
+	(NOT -1 nom)
+	(NOT 2 nom)
+;
+#  "alt ligg difor tilrette
+# alt har vore bra"))
+
+
+
+#:6626
+"<alt>"  SELECT:6626 (pron) IF
+	(1C pres/pret)
+	(-1C prep)
+;
+#  "mest av alt er det..."))
+
+
+
+#:6627
+"<alt>"  SELECT:6627 (pron) IF
+	(-1 %i%)
+	(NOT 1 nom)
+;
+#  "(alt) i alt"))
+
+
+
+#:6628
+"<alt>"  SELECT:6628 (pron) IF
+	(-1 %trass%)
+;
+#  "trass alt"))
+
+
+
+#:6629
+"<alt>"  SELECT:6629 (pron) IF
+	(-1C fv)
+	(*-1 setn-gr LINK 1 prep)
+;
+#  "I dag blei alt(det) øydelagd"))
+
+
+
+#:6630
+#"<alt>"  SELECT:6630 (pron) IF
+#	(-1C fv)
+#	(*-1 setn-gr LINK 1 adv)
+#;
+#  "så ble alt(det) ødelagt"))
+
+#:6631
+"<alt>"  SELECT:6631 (pron) IF
+	(NOT 1 perf-part)
+	(NOT 1 nom)
+;
+
+#  "Alt (det) var slik det skulle vere
+# Det var alt.
+# Ikkje: ho har alt ete
+
+
+#:6632
+"<alt>"  SELECT:6632 (pron) IF
+	(1 subst)
+	(NOT 1 subst-nøyt)
+;
+
+
 
 
 #:5010
@@ -1159,6 +1313,19 @@ CONSTRAINTS
 ;
 
 
+#:6546
+"<altars>"  SELECT:6546 (subst appell nøyt ub eint gen) IF
+	(-1 %til%)
+;
+#  "til alters"
+
+#:6546
+"<alters>"  SELECT:6546 (subst appell nøyt ub eint gen) IF
+	(-1 %til%)
+;
+#  "til alters"
+
+
 
 
 #:4995
@@ -1225,7 +1392,11 @@ CONSTRAINTS
 	(NOT 2 fem)
 ;
 
-
+#:6521
+"<anna>" SELECT:6521 (det nøyt) IF
+	  (-1 %blant%)
+;
+# blant
 
 #:6017
 
@@ -1256,6 +1427,12 @@ CONSTRAINTS
 	(0 det)
 ;
 
+#:6589
+"<atters>"  SELECT:6589 (subst appell ubøy) IF
+	(-1 %til%)
+;
+#  "til atters"
+
 
 #:4970
 "<bare>" SELECT:4970 (adv) IF
@@ -1282,7 +1459,12 @@ CONSTRAINTS
 	(*1 fl-subst BARRIER ikkje-adv-adj)
 ;
 
-
+#:6539
+"<beina>" SELECT:6539 (subst fl) IF
+	(1 %over%)
+	(2 %skrevs%)
+;
+#beina over skrevs
 
 #:4958
 "<best>" SELECT:4958 (adj sup ub) IF
@@ -1301,8 +1483,61 @@ CONSTRAINTS
 	(1 subst)
 ;
 
+#:6586
+"<bit>" SELECT:6686 (subst mask) IF
+	(-1 %og%)
+	(-2 %rubbel%)
+;
+
+#:6575
+"<borde>" SELECT:6575 (subst ubøy) IF
+	(-1 %frå%)
+;
+#ho gjekk frå borde
+
+#:6561
+"<bortsett>"  SELECT:6561 (adj nøyt ub eint) IF
+	(1 %frå%)
+;
+#  bortsett fra
 
 
+
+#:6520
+"<brakar>" SELECT:6520 (subst mask eint) IF
+	  (-1 %bamse%)
+;
+# bamse brakar
+
+#:6554
+"<brast>" SELECT:6554 (subst ubøy) IF
+	 (-1 %og%)
+	 (-2 %last%)
+;
+# last og brast
+
+
+#:6565
+"<cd>"  SELECT:6565 (subst) IF
+	(0 subst)
+	(0 storbokstav)
+;
+#  ikkje  romartal
+
+
+#:6582
+"<dags>"  SELECT:6582 (subst gen) IF
+	(-2 %no/nå%)
+	(-1 %til%)
+;
+#no til dags
+
+
+#:6591
+"<dess>"  SELECT:6591 (adv) IF
+	(-1 %til%)
+;
+#  "til dels"
 
 
 #:4952
@@ -1325,6 +1560,8 @@ CONSTRAINTS
 	(-1 setn-gr)
 	(NOT 2 pres/pret)
 ;
+
+
 
 
 #:4946
@@ -1359,6 +1596,26 @@ CONSTRAINTS
 "<di>" SELECT:4942 (adv) IF
 	(1 adj-komp)
 ;
+
+#:6510
+"<di>" SELECT:6510 (adv) IF
+	(1 %før/seinare/heller%)
+;
+#di før di seinare
+
+
+#:6544
+"<dus>"  SELECT:6544 (subst) IF
+	(-1 %og%)
+	(-2 %sus%)
+;
+#  "sus og dus"
+
+#:6590
+"<dømes>"  SELECT:6590 (subst appell nøyt) IF
+	(-1 %til%)
+;
+#  "til atters"
 
 
 #:4938
@@ -1529,6 +1786,12 @@ CONSTRAINTS
 	(*-2 setn-gr BARRIER ikkje-adv)
 ;
 
+#:6593
+"<endes>" SELECT:6593 (subst gen) IF
+	(-1 %til%)
+;
+#til endes
+
 
 #:4882
 "<endå>" SELECT:4882 (adv) IF
@@ -1551,8 +1814,9 @@ CONSTRAINTS
 
 #:4881
 "<enn>" SELECT:4881 (adv) IF
-	(1 adj-komp)
+	(1 %vidare%)
 ;
+#2022: begrensa til vidare
 
 
 #:4878
@@ -1698,9 +1962,16 @@ CONSTRAINTS
 ;
 
 #:6053
-"<fly>" SELECT:6053 (adv)
-	(1 %forbanne%)
+"<fly>" SUBSTITUTE:6053  ("fly" subst appell nøyt ub eint) ("fly" adv) ("fly" subst appell nøyt ub eint) IF
+       (1 %forbanne%)
 ;
+
+
+#:6053
+#"<fly>" SELECT:6053 (adv)
+#	(1 %forbanne%)
+#;
+#mars 2022: erstattet med substitute-regel siden fly ikke er adv meir
 
 #:4855
 "<folk>" SELECT:4855 (subst eint) IF
@@ -1719,13 +1990,13 @@ CONSTRAINTS
 	(-1C subst-gen)
 ;
 
-
+##Mars 2022: for som adv-lesning er fjernet som i bokmål
 #:4850
-"<for>" SELECT:4850 (adv) IF
-	(1 %mye/mykje/lite%)
-	(NOT 1 adj-sup)
-	(NOT 1 adj-komp)
-;
+#"<for>" SELECT:4850 (adv) IF
+#	(1 %mye/mykje/lite%)
+#	(NOT 1 adj-sup)
+#	(NOT 1 adj-komp)
+#;
 #  "6.9.2001: Behovet for meir skatteutjamningsmidlar
 # not 1 adj-komp adj-sup"))
 
@@ -1735,7 +2006,21 @@ CONSTRAINTS
 ;
 
 
+#:6501
+"<for>" SELECT:6501 (prep) IF
+	(NOT 0 fv)
+	(1 pron)
+	(2 %som%)
+;
+#for dei som
 
+
+#:6605
+"<for>" SELECT:6605 (prep) IF
+	(1 pron-akk)
+
+;
+#for oss
 
 #:6092
 "<for>" SELECT:6092 (prep) IF
@@ -1745,15 +2030,15 @@ CONSTRAINTS
 
 
 #:4851
-"<for>" SELECT:4851 (adv) IF
-	(NOT 1 setn-gr)
-	(NOT 1 %fullt/mange%)
-	(NOT 1 ikkje-adj)
-	(NOT 1 ordenstal)
-	(NOT 2 subst/adj/pron/det/konj)
-	(NOT 2 %som%)
+#"<for>" SELECT:4851 (adv) IF
+#	(NOT 1 setn-gr)
+#	(NOT 1 %fullt/mange%)
+#	(NOT 1 ikkje-adj)
+#	(NOT 1 ordenstal)
+#	(NOT 2 subst/adj/pron/det/konj)
+#	(NOT 2 %som%)
 
-;
+#;
 #  "31.8.2001: not 1 setn-gr"))
 
 
@@ -1918,6 +2203,36 @@ CONSTRAINTS
 ;
 
 
+#:6563
+"<for>"  SELECT:6563 (prep) IF
+	(1 %lengst%)
+;
+
+
+
+#:6572
+"<for>"  SELECT:6572 (prep) IF
+	 (1 %så/so%)
+	 (2 %vidt%)
+;
+#for så vidt
+
+
+
+#:6574
+"<for>"  SELECT:6574 (prep) IF
+	 (1 %visst%-nøyt)
+;
+#det er for visst slik
+
+
+#:6528
+"<forbanna>" SELECT:6528 (adj nøyt ub eint)
+	(-1 %fly%)
+;
+
+#fly forbanna
+
 #:4815
 "<forbanna>" SELECT:4815 (adj pos ub) IF
 	(1 %på%)
@@ -1937,6 +2252,13 @@ CONSTRAINTS
 	(2 ub-eint-subst)
 ;
 
+
+#:6577
+"<fri>" SUBSTITUTE:6577  ("fri" adj pos m/f ub eint) ("fri" adj pos eint bu) ("fri" adj pos m/f ub eint) IF
+       (-1 %det%)
+       (NOT 1 subst-mask/fem)
+;
+#For å løse: hun var ute i det(ikke pron)  fri
 
 
 #:4808
@@ -1979,6 +2301,13 @@ CONSTRAINTS
 	(1 %frå/for/ut%)
 	(*-1 verb LINK 0 kop-fv LINK *1 subst/pron/%all%/%mang%/%mange% LINK 0 nøyt LINK NOT 0 fl LINK NOT *1 ikkje-poss-det)
 ;
+
+#:6538
+"<fromme>" SELECT:6538 (subst)
+	(-1 %og%)
+	(-2 %lykke%)
+;
+#på lykke og fromme
 
 
 #:4804
@@ -2028,6 +2357,30 @@ CONSTRAINTS
 ;
 
 
+#:6578
+"<fyk>" SELECT:6578 (subst mask ub eint) IF
+	(1 %og%)
+	(2 %ein%)
+	(3 %fei%)
+;
+#i ein fyk og ein fei
+
+
+#:6594
+"<gagns>" SELECT:6594 (subst gen) IF
+	(-1 %til%)
+;
+#til gagns
+
+
+#:6522
+"<garde>" SELECT:6522 (subst ubøy) IF
+	  (-1 %av%)
+;
+# av garde
+
+
+
 #:6022
 "<gjeld>" SELECT:6022 (verb pres)
 	  (-2 %når%)
@@ -2063,12 +2416,13 @@ CONSTRAINTS
 	(-1 tal)
 ;
 
-
-#:4772
-"<grunn>" SELECT:4772 (subst) IF
-	(NOT 0 %for/altfor%)
-	(1 %til%)
+#:6555
+"<grann>" SELECT:6555 (subst nøyt eint) IF
+	 (-1 %lite%)
 ;
+# lite grann
+
+
 
 #:6153
 "<greier>" SELECT:6153 (subst fl) IF
@@ -2078,6 +2432,42 @@ CONSTRAINTS
 ;
 #ein lærar som er sur og greier, sant?
 
+#:4772
+"<grunn>" SELECT:4772 (subst) IF
+	(NOT 0 %for/altfor%)
+	(1 %til%)
+;
+
+
+#:6530
+"<hakk>" SELECT:6530 (adv) IF
+	     (1 %i%)
+	     (2 %hæl%)
+;
+
+
+#:6543
+"<halv>"  SELECT:6543 (subst) IF
+	(-1 %en%-prep)
+	(-2 %stopp%)
+;
+#  "stopp en halv"
+
+
+#:6531
+"<has>" SELECT:6531 (subst ubøy) IF
+	     (*-1 %få% BARRIER ikkje-adv)
+	     (1 %på%)
+; 
+#få has på
+
+
+
+#:6532
+"<hei>" SELECT:6532 (interj) IF
+	     (1 %sann%)
+; 
+#hei sann!
 
 
 
@@ -2146,6 +2536,109 @@ CONSTRAINTS
 	(**-2C setn-gr BARRIER ikkje-adv-adj-subst-pron-konj-det)
 ;
 
+#Reglar for hen
+
+#:6201
+"<hen>"  SELECT:6201 (pron) IF
+	(-1C setn-gr)
+	(NOT -1 %kor/kvar%)
+	(1 pres/pret)
+;
+#Nye reglar for hen: Hen ordnar det.
+
+#:6202
+"<hen>"  SELECT:6202 (pron) IF
+	(1 inf/perf-part)
+	(-1 hj-verb)
+;
+#Nye reglar for hen: difor må hen bu her
+
+
+#:6203
+"<hen>"  SELECT:6203 (pron) IF
+	(1 inf/perf-part)
+	(-1 setningsadv)
+	(-2 hj-verb)
+;
+#Nye reglar for hen: difor vil ikkje hen bu her
+
+#:6204
+"<hen>"  SELECT:6204 (pron) IF
+	(2 inf/perf-part)
+	(1 setningsadv)
+	(-1 hj-verb)
+;
+#Nye reglar for hen: difor vil hen ikkje bu her
+
+
+
+#:6205
+"<hen>"  SELECT:6205 (prep) IF
+	 (NOT -1 komma)
+	(*-1 %kor/kvar% BARRIER setn-gr)
+	(*-1C setn-gr LINK *1 fv)
+	(*-1C setn-gr LINK *1 subst/pron)
+;
+#Nye reglar for hen: Kor går du hen?
+
+#:6206
+"<hen>"  SELECT:6206 (prep) IF
+	(-1 %kor/kvar%)
+	(*1C setn-gr LINK *-1 fv)
+	(*1C setn-gr LINK *-1 subst/pron)
+;
+#Nye reglar for hen: Kor hen går du?
+
+#:6207
+"<hen>"  SELECT:6207 (prep) IF
+	(-1 %sjå%)
+	(1 %til%)
+
+;
+#Nye reglar for hen: sjå hen til?
+
+
+#:6208
+"<hen>"  SELECT:6208 (prep) IF
+	 (NOT -1 komma)
+	(*-1C setn-gr LINK *1 fv)
+	(*-1C setn-gr LINK *1 %hen%-verb)
+	(*-1C setn-gr LINK *1 subst/pron)
+;
+#Nye reglar for hen: dau/gakk/gå/kom/sjukne hen
+
+
+#:6209
+#"<hen>"  SELECT:6209 (prep) IF
+#	(-1 %annetsteds/ingensteds%)
+#;
+##Bare for bm?: Nye regler for hen: de måtte se annetsteds hen
+
+
+
+#:6210
+"<hen>"  SELECT:6210 (prep) IF
+	(NOT -2 %kalle%)
+	(-1 %seg/meg/deg%)
+;
+#Nye reglar for hen: "Daniel vrikka seg hen til apoteket": alltid prep etter "seg"
+
+#:6211
+"<hen>"  SELECT:6211 (prep) IF
+	(-1 %sjå%)
+	(1 %til%)
+
+;
+#Nye reglar for hen: Eg finn støtte for dette ved å sjå hen til lovendringsforslaget
+
+#:6212
+"<hen>"  SELECT:6212 (prep) IF
+	(-1 %seinare%)
+
+;
+#Nye reglar for hen: Seinare hen konsulterte han legen.
+
+
 
 #:4748
 "<henda>" SELECT:4748 (adv) IF
@@ -2157,6 +2650,13 @@ CONSTRAINTS
 "<hende>" SELECT:4746 (adv) IF
 	(-1 %kan%)
 ;
+
+#:6535
+"<hipp>" SELECT:6535 (subst eint) IF
+	     (1 %som%)
+	     (2 %happ%)
+;
+#hipp som happ
 
 
 #:4742
@@ -2181,6 +2681,13 @@ CONSTRAINTS
 "<hos>" SELECT:4736 (prep) IF
 	(0 prep)
 ;
+
+#:6578
+"<hui>" SELECT:6578 (subst mask ubøy) IF
+	(1 %og%)
+	(2 %hast%)
+;
+# i hui og hast
 
 
 #:4735
@@ -2221,6 +2728,15 @@ CONSTRAINTS
 	(1 %hende%)
 ;
 
+
+#:6580
+"<jo>" SELECT:6580 (interj) IF
+        (-1 setn-gr)
+	(1 %visst%-nøyt)
+	(2 komma)
+;
+
+#Jo visst, slik er det
 
 #:4729
 "<klart>" SELECT:4729 (verb perf-part) IF
@@ -2366,6 +2882,12 @@ CONSTRAINTS
 	(2 pres/pret)
 ;
 
+#:6505
+"<kor>" SELECT:6505 (adv) IF
+	(*1 %hen% BARRIER setn-gr)
+;
+#kor (adv) er du hen?
+
 
 #:4700
 "<kor>" SELECT:4700 (adv) IF
@@ -2377,13 +2899,22 @@ CONSTRAINTS
 "<kostar>" SELECT:6098 (verb pres) IF
 	   (*1 det-kvant BARRIER setn-gr)
 	   (NOT -1 adj-fl)
-; 
+;
 
 
 #:4698
 "<koss>" SELECT:4698 (adv) IF
 	(0 subst)
 ;
+
+
+#:6552
+"<kost>" SELECT:6552 (subst nøyt eint) IF
+	 (1 %og%)
+	 (2 %mask%-fork)
+;
+# kost og mask
+
 
 
 #:4696
@@ -2457,6 +2988,14 @@ CONSTRAINTS
 ;
 
 
+#:6581
+"<kvar>" SELECT:6581 (adv) IF
+	(1 %som%)
+	(2 %helst%)
+;
+#kvar som helst
+
+
 #:4681
 "<kvart>" SELECT:4681 (det nøyt) IF
 	(1 %sitt%)
@@ -2507,6 +3046,38 @@ CONSTRAINTS
 	(-1 %eit%)
 ;
 #et kvart glass vodka
+
+
+#:6556
+"<laga>" SELECT:6556 (verb perf-part) IF
+	 (-1 %liv%)
+;
+# Det er ikkje liv laga. 
+
+
+
+#:6523
+"<lage>" SELECT:6523 (subst ubøy) IF
+	  (-1 %av%)
+	  (-2 %ute%)
+;
+#ute av lage
+
+#:6595
+"<lags>" SELECT:6595 (subst gen) IF
+	(-1 %til%)
+;
+#til lags
+
+
+
+#:6547
+"<legg>"  SELECT:6547 (subst nøyt ent) IF
+	(-1 %og%)
+	(-2 %vask%)
+;
+#  "vask og legg"
+
 
 
 
@@ -2573,6 +3144,20 @@ CONSTRAINTS
 	(NOT -1 kop)
 ;
 
+#:6600
+"<like>" SELECT:6600 (adj bu) IF
+	(-1 %ved%)
+;
+#halde seg ved like
+
+
+#:6602
+"<like>" SELECT:6602 (adj bu) IF
+	(-1 %i%)
+	(1 %måte%)
+;
+#takk i like måte!
+
 
 #:4655
 "<like>" SELECT:4655 (subst) IF
@@ -2588,6 +3173,14 @@ CONSTRAINTS
 	(NOT 1 komma/konj)
 	(NOT 1 subst/adj)
 ;
+
+
+#:6596
+"<liks>" SELECT:6596 (adj gen) IF
+	(-1 %til%)
+;
+#til liks
+
 
 
 #:4646
@@ -2623,6 +3216,12 @@ CONSTRAINTS
 #  "ho har lite seg med det ho har"))
 
 
+#:6597
+"<live>" SELECT:6597 (subst ubøy) IF
+	(-1 %til%)
+;
+#vakna til live
+
 
 #:4636
 "<lyst>" SELECT:4636 (subst) IF
@@ -2630,11 +3229,48 @@ CONSTRAINTS
 	(*-1 setn-gr BARRIER kop)
 ;
 
+#:6562
+"<lønna>"  SELECT:6562 (adj) IF
+	(1 subst-eint)
+;
+#  "i lønna arbeid"
+
+
+#:6579
+"<mak>"  SELECT:6579 (subst ) IF
+	(-1 %og%)
+	(-2 %ro%)
+;
+#  "i ro og mak"
+
+
 
 #:4635
 "<mange>" SELECT:4635 (adj fl) IF
 	(0 adj)
 ;
+
+
+#:6553
+"<mask.>" SELECT:6553 ("mask." subst fork) IF
+	 (-1 %og%)
+	 (-2 %kost%)
+;
+# kost og mask
+
+#:6554
+"<mask>" SELECT:6554 (subst ubøy) IF
+	 (-1 %og%)
+	 (-2 %kost%)
+;
+# kost og mask
+
+#:6587
+"<matt>"  SELECT:6587 (subst) IF
+	(-1 %sjakk%)
+;
+#bare subst ved "sjakk matt"
+
 
 
 #:4628
@@ -2666,6 +3302,14 @@ CONSTRAINTS
 "<mine>" SELECT:4622 (det) IF
 	(-1 bu-fl-subst)
 ;
+
+#:6548
+"<minnes>"  SELECT:6548 (subst gen) IF
+	(-1 %til%)
+;
+#  "til minnes"
+
+
 
 
 #:6128
@@ -2710,7 +3354,18 @@ CONSTRAINTS
 	(*-1 %ha% CBARRIER setn-gr)
 ;
 
+#:6511
+"<mulla>"  SELECT:6511 (subst eint) IF
+	(1 prop)
+;
+#2022: Mulla Krekar
 
+
+#:6598
+"<møtes>" SELECT:6598 (subst gen) IF
+	(-1 %til%)
+;
+#til møtes
 
 
 #:4609
@@ -2732,6 +3387,16 @@ CONSTRAINTS
 ;
 
 
+#:6583
+"<no>" SELECT:6583 (adv) IF
+	(-1 %rett%)
+;
+
+#:6583
+"<no.>" SELECT:6583 (adv) IF
+	(-1 %rett%)
+;
+#Egen regel pga feil i multitaggeren
 
 #:4605
 "<noe>" SELECT:4605 (det) IF
@@ -2756,6 +3421,13 @@ CONSTRAINTS
 "<nokon>" SELECT:4603 (det mask) IF
 	(1 %annan%)
 ;
+
+#:6550
+"<null>" SELECT:6550 (det) IF
+	 (1 %og%)
+	 (2 %niks%)
+;
+#null og niks (null er det i følge ordbøkene, niks er adjektiv)
 
 
 #:4602
@@ -2983,6 +3655,14 @@ CONSTRAINTS
 ;
 
 
+#:6599
+"<pass>" SELECT:6599 (subst nøyt) IF
+	(-1 %til%)
+;
+#til pass
+
+
+
 #:4496
 "<rett>" SELECT:4496 (adj pos nøyt ub eint) IF
 	(1 infmerke)
@@ -3045,6 +3725,38 @@ CONSTRAINTS
 #  "i sitt rette lys"))
 
 
+#:6566
+"<rette>" SELECT:6566 (subst) IF
+	  (-1 %til%)
+	  (NOT 1 subst)
+;
+
+#:6567
+"<rette>" SELECT:6567 (subst) IF
+	  (*-2 pres/pret LINK 0 %komme%)
+	  (*-2 pres/pret BARRIER setn-gr)
+	  (-1 %til%)
+;
+#komme til rette
+
+
+#::6568
+"<rette>" SELECT:6568 (subst) IF
+	  (-1 %med%)
+	  (NOT 1 subst/adj)
+;
+#med rette fremhever juryen
+
+
+
+#::6569
+"<rette>" SELECT:6569 (subst) IF
+	  (-1 %i%)
+	  (1 %med%)
+;
+#gå i rette med
+
+
 
 #:4489
 "<rundt>" SELECT:4489 (prep) IF
@@ -3061,7 +3773,7 @@ CONSTRAINTS
 
 
 #:4488
-"<råd>" SELECT:4488 (subst ubøy) IF
+"<råd>" SELECT:4488 (subst) IF
 	(1 %til%)
 ;
 
@@ -3148,6 +3860,14 @@ CONSTRAINTS
 ;
 
 
+#:6600
+"<sals>" SELECT:6600 (subst nøyt) IF
+	(-1 %til%)
+;
+#til sals
+
+
+
 #:4474
 "<samd>" SELECT:4474 (adj pos ub eint) IF
 	(-1 pron-akk)
@@ -3179,6 +3899,17 @@ CONSTRAINTS
 	(-1 %og%)
 	(-2 %ein/ei/eit%)
 ;
+
+#:6533
+"<sann>" REPLACE:6533 (interj) (adv) IF
+	     (-1 %hei%)
+; 
+
+#:6534
+"<sann>" SELECT:6534 (interj) IF
+	     (-1 %hei%)
+; 
+#hei sann!
 
 
 #:4465
@@ -3353,6 +4084,15 @@ CONSTRAINTS
 ;
 
 
+#:6549
+
+"<si>" SELECT:6549 (subst appell ubøy) IF
+       (-1 %på%)
+       (1 setn-gr)
+;
+#ho hadde ein på si.
+
+
 #:4437
 "<sidan>" SELECT:4437 (adv) IF
 	(-1C subst)
@@ -3483,18 +4223,18 @@ CONSTRAINTS
 
 
 #:4418
-"<sjølv>" SELECT:4418 (det) IF
-	(1C fv)
-;
-
+#"<sjølv>" SELECT:4418 (det) IF
+#	(1C fv)
+#;
+#2022: For å gje den statistiske taggaren moglegheit til å velje riktigare
 
 #:4419
-"<sjølv>" SELECT:4419 (det) IF
-	(-1 pron)
-	(NOT 1 nom)
-	(NOT 1 prep)
-;
-
+#"<sjølv>" SELECT:4419 (det) IF
+#	(-1 pron)
+#	(NOT 1 nom)
+#	(NOT 1 prep)
+#;
+#2022: For å gje den statistiske taggaren moglegheit til å velje riktigare
 
 #:4409
 "<skal>" SELECT:4409 (verb) IF
@@ -3514,6 +4254,12 @@ CONSTRAINTS
 	(*1 iv BARRIER ikkje-adv)
 ;
 
+
+#:6537
+"<skrevs>"  SELECT:6537 (adv) IF
+	(-1 %hoppe/over/sitte%)
+;
+#  "beina over skrevs"))
 
 
 
@@ -3595,6 +4341,12 @@ CONSTRAINTS
 	(1 %ikkje/inkje/ingen%)
 ;
 
+#:6584
+"<slett>" SELECT:6584 ("slett" adj pos nøyt) IF
+	(-1 %og%)
+	(-2 %rett%)
+;
+
 
 #:4394
 "<slettes>" SELECT:4394 (adv) IF
@@ -3637,6 +4389,23 @@ CONSTRAINTS
 "<slutt>" SELECT:4387 (subst) IF
 	(-1 %til%)
 ;
+
+
+#:6588
+"<smitt>"  SELECT:6588 (subst) IF
+	(-1 %kvar%)
+	(1 %og%)
+	(2 %smule%)
+;
+#kvar smitt og smule
+
+
+#:6573
+"<so>"  SELECT:6573 (adv) IF
+	 (-1 %for%)
+	 (1 %vidt%)
+;
+#for så vidt
 
 
 #:4374
@@ -3824,6 +4593,12 @@ CONSTRAINTS
 	(NOT *-1 ub-mask-det)
 ;
 
+#:6545
+"<stå>"  SELECT:6545 (subst ubøy) IF
+	(-1 %store%)
+;
+#  "store stå"
+
 
 #:4353
 "<sum>" SELECT:4353 (subst) IF
@@ -3854,6 +4629,7 @@ CONSTRAINTS
 "<så>" SELECT:4335 (adv) IF
 	(-1 %vel%)
 ;
+
 
 
 #:4336
@@ -4008,6 +4784,22 @@ CONSTRAINTS
 	(NOT 1 subst-mask/fem-eint-ub)
 ;
 
+#:6601
+"<takk>" SELECT:6601 (interj) IF
+	 (1 %i%)
+	 (2 %like%)
+	 (3 %måte%)
+;
+# Takk i like måte
+
+#:6557
+"<takk>" SELECT:6557 (subst eint) IF
+	 (1 %til%)
+	 (2 pron-akk/subst)
+
+;
+# Takk til deg /takk til Oslo City
+
 
 #:4324
 "<tapt>" SELECT:4324 (verb perf-part) IF
@@ -4158,9 +4950,16 @@ CONSTRAINTS
 
 #:4304
 "<tre>" SELECT:4304 (verb inf) IF
-	(1 prep/@adv)
+	(1 adv/<adv>/prep)
 	(-1 m-hj-verb)
 ;
+
+
+#:6551
+"<tru>" SELECT:6551 (verb inf) IF
+	 (-1 %mun%)
+;
+# mun (pres) tru ho rekk bussen?
 
 
 
@@ -4187,6 +4986,20 @@ CONSTRAINTS
 "<tusen>" SELECT:4300 (subst nøyt fl) IF
 	(*-1 kvant-med-fleire LINK NOT 0 det-eint-nøyt-halvt LINK NOT *1 ikkje-adv-adj)
 ;
+
+#:6570
+"<tvers>"  SELECT:6570 (subst) IF
+	(-1 %på%)
+;
+#  på tvers
+
+#:6571
+"<tvers>"  SELECT:6571 (subst) IF
+	(-3 %på%)
+	(-2 %kryss%)
+	(-1 %og%)
+;
+#  på kryss og tvers
 
 
 #:4298
@@ -4295,7 +5108,7 @@ CONSTRAINTS
 
 #:6154
 "<veit>" SELECT:6154 (verb pres) IF
-	 (1 nom/akk-pron)
+	 (1 pron-pers)
 ;
 #veit du, veit eg
 
@@ -4303,9 +5116,12 @@ CONSTRAINTS
 #:6155
 "<veit>" SELECT:6155 (verb pres) IF
 	 (1 %ikkje%)
-	 (2 nom/akk-pron)
+	 (2 pron-pers)
+#2023: pron-pers istf pron-nom/akk
+
 ;
 #veit ikkje eg
+#2023: pron-pers istf pron-nom/akk
 
 #:4263
 "<vel>" SELECT:4263 (adv) IF
@@ -4481,6 +5297,13 @@ CONSTRAINTS
 #det er så visst (ikkje) slik
 #Velger bort denne tolkningen
 
+#:6564
+"<vm>"  SELECT:6564 (subst) IF
+	(0 det)
+;
+#  VM er ikke romertall!
+
+
 
 #6099
 "<øre>" SELECT:6099 (subst) IF
@@ -4522,6 +5345,9 @@ CONSTRAINTS
 	(**-1C setn-gr BARRIER fv)
 	(**1C setn-gr BARRIER fv LINK NOT 0 utrop-t)
 ;
+
+
+
 
 
 
@@ -4655,6 +5481,12 @@ CONSTRAINTS
 	(NOT -1 fl-det)
 ;
 
+#:6536
+"<att.>" REMOVE:6536 (prep fork) IF
+	     (1 setn-gr)
+;
+#han gjekk heim att.
+
 
 #:4971
 "<bak>" REMOVE:4971 (subst) IF
@@ -4729,7 +5561,7 @@ CONSTRAINTS
 
 #:6000
 "<bare>" REMOVE:6000 (adj bu eint) IF
-	(NOT **-1C det-eint BARRIER ikkje-adv-adj)
+	(NOT *-1C det-eint BARRIER ikkje-adv-adj)
 ;
 
 
@@ -4743,7 +5575,7 @@ CONSTRAINTS
 
 #:6002
 "<bare>" REMOVE:6002 (adj fl) IF
-	(NOT **-1C fl-det BARRIER ikkje-adv-adj)
+	(NOT *-1C fl-det BARRIER ikkje-adv-adj)
 ;
 
 #:6003
@@ -4766,6 +5598,14 @@ CONSTRAINTS
 ;
 
 
+#:6526
+"<datt>" REMOVE:6526 (verb pret) IF
+	(-1 konj)
+	(-2 %ditt%)
+;
+#  "ditt og datt"
+
+
 #:4953
 "<dei>" REMOVE:4953 (pron pers) IF
 	(1 subst/adj)
@@ -4776,10 +5616,32 @@ CONSTRAINTS
 
 
 
+#:6507
+"<da>" REMOVE:6507 (symb) IF
+	(0 adv)
+;
+#da er nok veldig sjeldan symbol i vanlege tekstar
+
+
+#:6592
+"<dels>"  REMOVE:6592 (subst gen) IF
+	(0 adv)
+;
+#dels er som regel adverb
+
+
+#:6509
+"<dess>" REMOVE:6509 (subst) IF
+	(1 adj/adv)
+;
+#dess (adv) meir verre
+
 
 #:6004
 "<di>" REMOVE:6004 (adv) IF
 	(NOT 1 adj-komp)
+	(NOT 1 %før/seinare/heller%)
+	(NOT 1 %heller%)
 ;
 
 
@@ -4790,6 +5652,21 @@ CONSTRAINTS
 	(0 adj)
 ;
 #  "\"direkte\" er berre bu-subst, og då berre i \"på direkten\""))
+
+
+
+#:6524
+"<ditt>" REMOVE:6524 (det) IF
+	(1 konj)
+	(2 %datt%)
+;
+#  "ditt og datt"
+
+#:6525
+"<ditt>" REMOVE:6525 (subst) IF
+	(NOT 2 %datt%)
+;
+#  bare subst ved "ditt og datt"
 
 
 
@@ -5013,6 +5890,8 @@ CONSTRAINTS
 ;
 
 
+
+
 #:4871
 "<far>" REMOVE:4871 (subst nøyt) IF
 	(1 poss-det)
@@ -5085,40 +5964,40 @@ CONSTRAINTS
 	(NOT 1 %forbanne%)
 ;
 
-
+#Mars 2022: for som adv-lesning er fjernet som i bokmål
 #:4826
-"<for>" REMOVE:4826 (adv) IF
-	(1 adj)
-	(NOT 1 %mye/mykje/lite%)
-	(*2C subst BARRIER ikkje-adv-adj)
-;
+#"<for>" REMOVE:4826 (adv) IF
+#	(1 adj)
+#	(NOT 1 %mye/mykje/lite%)
+#	(*2C subst BARRIER ikkje-adv-adj)
+#;
 
 
 #:4827
-"<for>" REMOVE:4827 (adv) IF
-	(1C ub-eint-nøyt-adj)
-	(2 adj)
-;
+#"<for>" REMOVE:4827 (adv) IF
+#	(1C ub-eint-nøyt-adj)
+#	(2 adj)
+#;
 
 
 #:4828
-"<for>" REMOVE:4828 (adv) IF
-	(1 det/adv)
-;
+#"<for>" REMOVE:4828 (adv) IF
+#	(1 det/adv)
+#;
 
 
 #:4829
-"<for>" REMOVE:4829 (adv) IF
-	(1 <perf-part>)
-	(NOT 1 adj-pos)
-	(NOT 1 adv)
-;
+#"<for>" REMOVE:4829 (adv) IF
+#	(1 <perf-part>)
+#	(NOT 1 adj-pos)
+#	(NOT 1 adv)
+#;
 
 
 #:4830
-"<for>" REMOVE:4830 (adv) IF
-	(NOT 1 adj-pos)
-;
+#"<for>" REMOVE:4830 (adv) IF
+#	(NOT 1 adj-pos)
+#;
 
 
 #:4825
@@ -5198,6 +6077,8 @@ CONSTRAINTS
 "<før>" REMOVE:4795 (adv) IF
 	(0 adv)
 ;
+#  "referansegrammatikken ser ikkje ut til å rekne \"før\" som
+# adverb, berre som preposisjon og subjunksjon"))
 
 
 #:4790
@@ -5394,6 +6275,18 @@ CONSTRAINTS
 ;
 
 
+
+#:6200
+"<hen>"  REMOVE:6200 (adv) IF
+	(0 prep)
+;
+# Nye reglar for hen
+# Referansegrammatikken skriv at hen alltid er prep og ikkje adv (når hen ikkje er pron )
+
+
+
+
+
 #:4747
 "<henda>" REMOVE:4747 (adv) IF
 	(NOT -1 %kan%)
@@ -5440,7 +6333,13 @@ CONSTRAINTS
 #:6054
 "<i>" REMOVE:6054 (det)
       (NOT 0 storbokstav)
-; 
+;
+
+#:6529
+"<går>"  REMOVE:6529 (subst) IF
+	(NOT -1 %i%)
+;
+#går er bare subst etter i-
 
 
 
@@ -5658,7 +6557,6 @@ CONSTRAINTS
 	(*-1 verb LINK NOT 0 %sjå/høyrast/kjennast% LINK NOT 0 kop)
 ;
 
-
 #:4650
 "<like>" REMOVE:4650 (adj) IF
 	(-1 %for%)
@@ -5798,6 +6696,18 @@ CONSTRAINTS
 	(*1 pres/pret LINK NOT *1 clb-konj)
 ;
 
+#:6616
+"<med>" REMOVE:6616 (sbu) IF
+	(NOT 1 nom)
+;
+#med er sjeldan sbu. NN-ordboka nemner eksempel som "ho les med ho et", "eg fekk vere der med eg ville" "ungane fekk is med dei ville ha"
+
+#:6617
+"<med>" REMOVE:6617 (sbu) IF
+	(1 akk)
+;
+#med er sjeldan sbu. NN-ordboka nemner eksempel som "ho les med ho et", "eg fekk vere der med eg ville" "ungane fekk is med dei ville ha"
+
 
 #:4627
 "<men>" REMOVE:4627 (subst eint) IF
@@ -5849,6 +6759,20 @@ CONSTRAINTS
 "<mot>" REMOVE:4613 (subst) IF
 	(1 nom)
 ;
+
+
+
+
+#:4613
+"<mot>" REMOVE:4613 (subst) IF
+	(1 nom)
+;
+
+#:6621
+"<mykje>" REMOVE:6621 ("mykjen" adj pos nøyt ub eint) IF
+	(0 %mye/mykje%)
+;
+#mykje - mykjen: "i eldre mål: stor, mykje "
 
 
 #6125
@@ -6460,7 +7384,7 @@ CONSTRAINTS
 
 
 #:6079
-"<positiv>" REMOVE:(subst) IF
+"<positiv>" REMOVE:6079 (subst) IF
 	(0 adj)
 	(NOT *-1 ub-eint-mask/fem-det BARRIER ikkje-adv-adj)
 	(NOT *-1 ub-nøyt-det BARRIER ikkje-adv-adj)
@@ -6490,6 +7414,20 @@ CONSTRAINTS
 ;
 #ein rakkar
 
+
+#:6540
+"<ranke>"  SELECT:6540 (subst ubøy) IF
+	(-1 %ride%)
+;
+#  "ride ranke"
+
+#:6541
+"<rast>"  SELECT:6541 (subst mask) IF
+	(1 %eller%)
+	(2 %ro%)
+;
+#  "rast eller ro"
+
 #:4493
 "<rett>" REMOVE:4493 (adj <perf-part>) IF
 	(0 adj)
@@ -6507,6 +7445,19 @@ CONSTRAINTS
 	(*-1 setn-gr BARRIER %ha%)
 ;
 
+#:6585
+"<ride>"  SELECT:6585 (verb inf) IF
+	(1 %ranke/ride%)
+;
+#  "ride (ride) ranke"
+
+#:6542
+"<rist>"  SELECT:6542 (subst mask) IF
+	(1 %eller%)
+	(2 %ro%)
+;
+#  "rist eller ro"
+
 
 #:4469
 "<same>" REMOVE:4469 (subst) IF
@@ -6518,6 +7469,20 @@ CONSTRAINTS
 "<same>" REMOVE:4470 (subst) IF
 	(NOT *-1 ub-mask-det)
 ;
+
+
+#:6527
+"<seie>" SUBSTITUTE:6527  ("seie" verb inf) ("seie" adv) ("seie" verb inf) IF
+       (-1 %enn%)
+;
+#eg gjev ikkje 100 kr, enn seie 200
+
+
+#:6559
+"<seks>"  REMOVE:6559 (subst fork gen) IF
+	(0 det)
+;
+
 
 
 #:4466
@@ -6536,6 +7501,12 @@ CONSTRAINTS
 #:4468
 "<ser>" REMOVE:4468 (adj) IF
 	(NOT *-1 ub-mask-det)
+;
+
+
+#:6622
+"<ser>" REMOVE:6622 (verb imp) IF
+	(0 %sjå%)
 ;
 
 
@@ -6679,6 +7650,18 @@ CONSTRAINTS
 ;
 
 
+#:6503
+"<sola>" REMOVE:6503 (adj <perf-part>) IF
+	(NOT 1 %sko/støvel/støvlett%)
+;
+#adj slettast om det ikkje er som i "ein sola støvlett"
+
+#:6505
+"<sola>" REMOVE:6505 (verb) IF
+	(NOT 1 %seg/meg/deg%)
+;
+#verb slettast om det ikkje er som i "eg vil sola meg"
+
 #:4363
 "<spent>" REMOVE:4363 (adj <perf-part>) IF
 	(NOT 1 %frå/for/ut%)
@@ -6695,6 +7678,12 @@ CONSTRAINTS
 "<stad>" REMOVE:4360 (adv) IF
 	(NOT -1 %gå/springe%-osv)
 ;
+
+#:6508
+"<stad>" REMOVE:6508 (subst nøyt) IF
+	(0 subst-mask)
+;
+#Svært sjeldan i tydinga elvebard (=stad nøyt)
 
 
 #:6078
@@ -6780,7 +7769,7 @@ CONSTRAINTS
 
 #:6011
 "<tre>" REMOVE:6011 (verb inf) IF
-	(NOT 1 prep/@adv)
+	(NOT 1 adv/<adv>/prep)
 ;
 
 
@@ -6984,6 +7973,9 @@ CONSTRAINTS
 ;
 
 
+
+
+
 #:4253
 "<vera>" REMOVE:4253 (subst bu) IF
 	(0 verb)
@@ -7163,8 +8155,35 @@ CONSTRAINTS
 ;
 
 
+
+
 CONSTRAINTS
 ## select ndomain
+
+
+#:6560
+SELECT:6560 (subst <tittel>)
+	(1 subst-prop)
+;
+
+
+#:6517
+SELECT:6517 (subst eint bu) IF
+	(0 %-saka%)
+	(0 verb/adj)
+;
+
+
+#:6506
+SELECT:6506 (prep)
+	(0 adv)
+	(NOT 0 <adv>)
+	(NOT 0 ikkje-adv-prep)
+;
+#2022. OBT følgjer Referansegrammatikken. I den opprinnelege versjonen hadde alle intransitive preposisjonar berre prep-lesning. I den nyaste versjonen av multitaggaren har intransitive preposisjonar fått tilbake adv-lesning. Tror det er enklare å fjerne dem med ein cg-regel enn å gå igjennom leksikonet ein gong til. Sjå eigen regel for hen.
+
+
+
 #:4209
 SELECT:4209 (<adv>) IF
 	(NOT 0 %lenger/lengst%)
@@ -7175,6 +8194,7 @@ SELECT:4209 (<adv>) IF
 
 #:4210
 SELECT:4210 (<adv>) IF
+	(NOT 0 inf)
 	(NOT 0 adj-komp)
 	(-1C verb)
 	(NOT 1 nom)
@@ -7259,6 +8279,15 @@ SELECT:4219 (<adv>) IF
 ;
 
 
+#:6512
+ SELECT:6512 (<adv>) IF
+	(1C adv)
+	(NOT 0 adj-komp)
+	(NOT 0 fv)
+;
+#2022 frå bm:  "heller ikkje"))
+
+
 #:4220
 SELECT:4220 (<adv>) IF
 	(1C adj)
@@ -7280,6 +8309,20 @@ SELECT:6120 (adj) IF
 	(0 samset)
 ;
 #seksjonsvis
+
+#:6515
+SELECT:6515 (adj) IF
+	(0 %-isk%)
+	(0 samset)
+;
+#2022: ergonomisk
+
+#:6516
+SELECT:6516 (adj) IF
+	(0 %-messig%)
+	(0 samset)
+;
+#2022: prismessig
 
 
 
@@ -8258,7 +9301,7 @@ SELECT:4160 (adj fl) IF
 	(*-1 pron-akk-fl BARRIER ikkje-adv)
 	(*-1 pron-akk-fl LINK -1C objpred-pron-verb LINK NOT -1 clb)
 ;
-
+#2023-kommentar: ser ut som den uansett bare tar eksempler som "seie oss/dykk/ leie"
 
 #:4161
 SELECT:4161 (adj fl) IF
@@ -8912,7 +9955,28 @@ SELECT:4108 (adj nøyt ub eint) IF
 	(NOT -2 objpred-verb)
 	(NOT -2 ditrans)
 ;
+#bøyer seg gråtande
 
+
+
+#:6611
+SELECT:6611 (adj nøyt ub eint) IF
+	(NOT 0 %fast%)
+	(NOT 0 ikkje-adj)
+	(-1C pron-pers)
+	(NOT -1 pron-nom)
+	(-2C verb)
+	(NOT -2 objpred-pron-verb)
+	(NOT -2 objpred-verb)
+	(NOT -2 ditrans)
+	(NOT -2 kop)
+	(NOT 1 nom)
+;
+
+#2023: skal ta de eksemplene som ikke virker lenger når akk-nom-distinksjonen er vekk på mange pronomen:
+#fann det naudsynt
+#flire han ironisk
+#samme regel som 4108
 
 #:4109
 SELECT:4109 (adj nøyt ub eint) IF
@@ -10014,6 +11078,7 @@ SELECT:3896 (adj pos fl) IF
 #:3897
 SELECT:3897 (adj pos fl) IF
 	(0 pos-bu-eint)
+	(NOT -1 pos-bu-eint)
 	(NOT 0 pos-ub-eint)
 	(NOT 0 nr2-det)
 	(NOT 0 verb)
@@ -10026,6 +11091,7 @@ SELECT:3897 (adj pos fl) IF
 	(NOT -1 prop-det-eint)
 	(*-1 det-gen LINK *1 ikkje-adv-adj-det2)
 ;
+#2023: not -1 pos-bu-eint
 
 
 #:3898
@@ -10113,6 +11179,7 @@ SELECT:3901 (adj pos fl) IF
 #:3902
 SELECT:3902 (adj pos fl) IF
 	(NOT 0 adj-ub-eint)
+	(NOT -1 pos-bu-eint)
 	(NOT 0 prep)
 	(NOT 0 subst)
 	(NOT 0 det)
@@ -10127,6 +11194,7 @@ SELECT:3902 (adj pos fl) IF
 	(*-1 det-gen LINK *1 ikkje-adv-adj-det2)
 	(*1 fl-subst BARRIER ikkje-adv-adj)
 ;
+#2023: not -1 pos-bu-eint
 
 
 #:3903
@@ -16336,6 +17404,19 @@ SELECT:3472 (adj pos m/f ub eint) IF
 	(NOT 1 komma/konj)
 	(NOT 1 adj)
 ;
+
+#:6620
+SELECT:6620 (adj pos m/f ub eint) IF
+	(NOT 0 fv)
+	(NOT 0 subst)
+	(NOT 0 det)
+	(NOT 0 farlege-adj)
+	(-1C %all%-mask-fem)
+	(NOT 1 komma/konj)
+	(NOT 1 adj)
+;
+#all skriftleg kommunikasjon
+
 
 
 #:3473
@@ -36964,6 +38045,12 @@ SELECT:2635 (det kvant fem) IF
 ;
 #  "all (den gode) suppa"))
 
+#:6618
+SELECT:6618 (det kvant fem) IF
+	(0 %all%)
+	(*1 ub-eint-fem-subst LINK NOT 0 ub-eint-mask-subst LINK NOT *-1 ikkje-adv-adj-det)
+;
+#  "all (god) suppe"))
 
 
 #:2634
@@ -36972,6 +38059,13 @@ SELECT:2634 (det kvant mask) IF
 	(*1 bu-eint-mask-subst LINK NOT 0 bu-eint-fem-subst LINK NOT *-1 ikkje-adv-adj-det)
 ;
 #  "all (den gode) maten"))
+
+#:6619
+SELECT:6619 (det kvant mask) IF
+	(0 %all%)
+	(*1 ub-eint-mask-subst LINK NOT 0 ub-eint-fem-subst LINK NOT *-1 ikkje-adv-adj-det)
+;
+#  "all (god) mat"
 
 
 
@@ -37207,21 +38301,41 @@ SELECT:2613 (det) IF
 
 
 #:2614
-SELECT:2614 (det) IF
-	(0 %ein/ei/eit%)
+SELECT:2614 (pron) IF
+	(0 %ein%)
 	(1 %som%)
 ;
-#  "ein som er fin"))
+#  "ein som er fin"
+#2023: NDT sier at dette er pron, ikkje det.
+
+
+#:2614
+SUBSTITUTE:2614 ("ein" det kvant fem eint) ("ei" pron pers eint hum nom) ("ein" det kvant fem eint) IF
+	(0 %ei/eit%)
+	(1 %som%)
+;
+#  "ei som er fin"
+#2023: NDT sier at dette er pron, ikkje det. Nye regler for ei og eit som ikkje er pron frå multitaggar
 
 
 
 #:2615
-SELECT:2615 (det) IF
+ SELECT:2615 (det) IF
 	(0 %ein/ei/eit%)
 	(1 %av%)
 	(2 nom)
 ;
 #  "ein av grunnane til ... "))
+
+
+#:6513
+ SELECT:6513 (det) IF
+	(0 %nokon/noen/noe/ingen%)
+	(1 %av%)
+	(2 nom)
+;
+#  "noen av grunnene til ... "))
+#2022: tilsvarande regel som 2615
 
 
 
@@ -37640,6 +38754,38 @@ SELECT:2590 (prep) IF
 	(**1C pres/pret LINK *1 pron-nom LINK NOT 1 %som% LINK NOT 0 pres/pret)
 ;
 
+#:6612
+#SELECT:6612 (prep) IF
+#	(NOT 0 konj)
+#	(**1C pres/pret LINK *1 ikkje-adv LINK 0 pron-nom LINK NOT 0 akk LINK NOT 0 det LINK *-1 pres/pret LINK NOT *-1 ikkje-adv-adj-substmgen-pron-konj-detmdem-prep)
+#	(**1C pres/pret LINK *1 %det/dette%-pron LINK NOT 1 %som% LINK NOT 0 pres/pret)
+#;
+
+#:6612
+SELECT:6612 (prep) IF
+	(0 sbu)
+	(NOT 0 %som/enn%)
+	(**1C pres/pret LINK *1 ikkje-adv LINK 0 %det/dette%-pron LINK *-1 pres/pret LINK NOT *-1 ikkje-adv-adj-substmgen-pron-konj-detmdem-prep)
+;
+#2023:ny regel for å dekke noe av det 2590 ikke får med etter nom-akk-distinksjon er borte på flere pron
+#ser ut som om regelen virker dårlig om den/denne/dei/desse er med
+
+#:6613
+#SELECT:6613 (prep) IF
+#	(0 sbu)
+#	(NOT 0 %som/enn%)
+#	(**1C pres/pret LINK *1 ikkje-adv LINK 0 %den/denne%-pron LINK NOT 1 pres/pret LINK *-1 pres/pret LINK NOT *-1 ikkje-adv-adj-substmgen-pron-konj-detmdem-prep)
+;
+#2023:ny regel for å dekke noe av det 2590 ikke får med etter nom-akk-distinksjon er borte på flere pron
+
+
+#:6614
+#SELECT:6614 (prep) IF
+#	(0 sbu)
+#	(NOT 0 %som/enn%)
+#	(**1C pres/pret LINK *1 ikkje-adv LINK 0 %dei/desse%-pron LINK NOT 1 pres/pret LINK *-1 pres/pret LINK NOT *-1 ikkje-adv-adj-substmgen-pron-konj-detmdem-prep)
+#;
+#2023:ny regel for å dekke noe av det 2590 ikke får med etter nom-akk-distinksjon er borte på flere pron
 
 #:2591
 SELECT:2591 (prep) IF
@@ -37998,6 +39144,7 @@ SELECT:2542 (pron pers) IF
 
 #:2543
 SELECT:2543 (pron pers) IF
+	(NOT 0 %hen-pron%)
 	(NOT 0 poss-det)
 	(NOT 0 subst-gen)
 	(NOT 0 gen)
@@ -38025,6 +39172,7 @@ SELECT:2544 (pron pers) IF
 
 
 SELECT:2545 (pron pers) IF
+	(NOT 0 %hen-pron%)
 	(NOT 0 poss-det)
 	(NOT 0 gen)
 	(NOT 0 %ein/ei/eit%)
@@ -38226,7 +39374,7 @@ SELECT:2531 (pron nom) IF
 	(*1 setn-gr BARRIER nominativ)
 ;
 
-#Her stod 2532
+#2023: siden nom/akk-distinksjon er endret, ble nominativ erstattet med pron-pers##gjort om igjen 17.3
 
 
 #:2519
@@ -38343,8 +39491,8 @@ SELECT:2507 (sbu) IF
 
 
 #:2508
-SELECT:2508 (sbu) IF
-	(0 %om/enn/som%)
+SELECT:2508 (prep) IF
+	(0 %som/enn%)
 	(1 perf-part)
 	(NOT 1 bu-eint-fem-subst)
 	(NOT 1 bu-eint-nøyt-subst)
@@ -38352,6 +39500,9 @@ SELECT:2508 (sbu) IF
 	(NOT 2 subst/adj)
 	(*1 setn-gr BARRIER pres/pret)
 ;
+#  "som (prep) dokumentert i dag 
+#2022: retta til prep pga koding i NDT på bokmål:
+# som (prep) dokumentert nytt materiale viser"
 
 
 #:2509
@@ -38421,10 +39572,13 @@ SELECT:2515 (sbu) IF
 SELECT:2516 (sbu) IF
 	(NOT 0 %berre/bare%)
 	(NOT 0 %så%)
+	(NOT -1C setn-gr)
 	(1C nominativ)
-	(**2C pres/pret LINK *-1 ikkje-adv LINK 0 nominativ)
+	(**2C pres/pret BARRIER ikkje-adv)
 ;
-
+#2023: siden nom/akk-distinksjon er endret, ble nominativ erstattet med pron-pers og NOT akk## gjort om igjen!!
+#2023: (**2C pres/pret BARRIER ikkje-adv) istedet for (**2C pres/pret LINK *1 ikkje-adv 0 pron-pers)
+#2023: 	(NOT -1C setn-gr)
 
 #:2517
 SELECT:2517 (sbu) IF
@@ -38453,10 +39607,12 @@ SELECT:2497 (subst eint) IF
 #:2498
 SELECT:2498 (subst eint) IF
 	(NOT 0 fl)
+	(NOT 0 prop)
 	(1C setn-gr/verb)
 	(*-1 konj LINK NOT 0 <adv> LINK NOT *1 ikkje-adv-adj-det)
 	(*-1 konj LINK *-1 ikkje-poss-det LINK 0 subst LINK NOT 0 ikkje-subst LINK NOT 0 fl LINK NOT *1 setn-gr)
 ;
+#2022: NOT 0 prop
 
 
 #:2499
@@ -38768,21 +39924,26 @@ SELECT:2470 (subst mask eint) IF
 SELECT:2471 (subst mask eint) IF
 	(NOT 0 adj)
 	(NOT 0 farlege-mask-subst)
+	(NOT 0 prop)
 	(NOT -1 komma/konj)
 	(**-1C mask-det LINK NOT 0 nr2-det LINK NOT *1 ikkje-adv-adj)
 	(**-1C mask-det LINK *1 ub-eint-mask-adj)
 ;
+#2022 not 0 prop
 
 
 #:2472
 SELECT:2472 (subst mask eint) IF
 	(NOT 0 adj)
 	(NOT 0 fv)
+	(NOT 0 prop)
 	(NOT 0 farlege-mask-subst)
 	(NOT 1 subst-mask)
 	(NOT -1 komma/konj)
-	(**-1C mask-det LINK NOT 0 nr2-det LINK NOT *1 ikkje-adv-adj)
+	(**-1C det-mask-eint LINK NOT 0 nr2-det LINK NOT 0 gen LINK NOT *1 ikkje-adv-adj)
 ;
+#2022: NOT 0 gen + eint inn
+#2022 not 0 prop
 
 
 #:2463
@@ -39096,8 +40257,10 @@ SELECT:2457 (subst) IF
 	(-1C adj)
 	(NOT -1 farlege-adj)
 	(-2C prep)
+	(NOT 1 subst)
 ;
 #  "30.8.2001: NOT 0 SPRÅK"))
+#2022: NOT 1 subst
 
 
 
@@ -39122,7 +40285,7 @@ SELECT:2460 (subst) IF
 	(NOT 0 farlege-adj-subst)
 	(1 komma/konj)
 	(-1C prep)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 prep-intrans)
 	(NOT 2 subst/adj)
 ;
@@ -39164,7 +40327,7 @@ SELECT:2430 (verb inf st-form) IF
 #:2431
 SELECT:2431 (verb inf st-form) IF
 	(0 farlege-inf)
-	(-1 @adv)
+	(-1 adv)
 	(*-1 m-hj-verb LINK NOT 0 %få% LINK NOT *1 setn-gr)
 	(*-1 m-hj-verb BARRIER inf)
 	(*-1 m-hj-verb BARRIER perf-part)
@@ -39177,7 +40340,7 @@ SELECT:2431 (verb inf st-form) IF
 SELECT:2432 (verb inf st-form) IF
 	(0 farlege-inf)
 	(NOT 0 perf-part)
-	(-1 @adv)
+	(-1 adv)
 	(*-1 m-hj-verb BARRIER setn-gr)
 	(*-1 m-hj-verb BARRIER inf)
 	(*-1 m-hj-verb BARRIER perf-part)
@@ -39250,7 +40413,7 @@ SELECT:2418 (verb inf) IF
 #:2419
 SELECT:2419 (verb inf) IF
 	(NOT 0 farlege-inf)
-	(-1 @adv)
+	(-1 adv)
 	(*-1 m-hj-verb LINK NOT 0 %få% LINK NOT *1 setn-gr)
 	(*-1 m-hj-verb BARRIER inf)
 	(*-1 m-hj-verb BARRIER perf-part)
@@ -39261,7 +40424,7 @@ SELECT:2419 (verb inf) IF
 SELECT:2420 (verb inf) IF
 	(NOT 0 perf-part)
 	(NOT 0 farlege-inf)
-	(-1 @adv)
+	(-1 adv)
 	(*-1 m-hj-verb BARRIER setn-gr)
 	(*-1 m-hj-verb BARRIER inf)
 	(*-1 m-hj-verb BARRIER perf-part)
@@ -42632,6 +43795,17 @@ SELECT:6141 (verb) IF
 ## remove ndomain
 
 
+#:6558
+REMOVE:6558 (fork)
+	(1 punktum)
+	(0 subst/pron)
+	(NOT 0 interj)
+;
+#Dei hadde aldri fått bedre mat. (ikkje forkorting)
+#Men ikkje: den steig med 30 pst.(som også er interjeksjon)
+
+
+
 #:6170
 REMOVE:6170 (subst gen) IF
 	(0 %-kurs%)
@@ -42895,9 +44069,10 @@ REMOVE:2165 (adj bu eint) IF
 	(NOT -1 prep)
 	(NOT -1 subst-prop)
 	(NOT -1 %år%)
+	(NOT -1 pos-bu-eint)
 	(*-1 det-gen LINK *1 ikkje-adv-adj)
 ;
-
+#2023: not -1 pos-bu-eint
 
 #:2166
 REMOVE:2166 (adj bu eint) IF
@@ -44390,6 +45565,17 @@ REMOVE:2055 (adj <perf-part>) IF
 # burde slå i bordet (ikkje adj <perf-part>) med."))
 
 
+#:6518
+REMOVE:6518 (adj <perf-part>) IF
+	(-1 prep)
+	(-1 %som/enn%)
+	(0 perf-part)
+;
+# 2023: fjernar overflødige lesingar 
+# som adj her: 
+# som sagt, enn gjort
+
+
 
 #:2056
 REMOVE:2056 (adj <perf-part>) IF
@@ -45080,8 +46266,8 @@ REMOVE:1996 (adj) IF
 	(NOT 0 nøyt)
 	(-1C subst)
 	(NOT 1 adj-adv-subst-konj)
-	(*-1 setn-gr LINK NOT **1C pres/pret)
-	(*1 setn-gr LINK NOT **-1C pres/pret)
+	(**-1 setn-gr LINK NOT *1C pres/pret)
+	(**1 setn-gr LINK NOT *-1C pres/pret)
 ;
 #  "som t.d. franskmennene gjer (ikkje adj) i staden for..."))
 
@@ -45976,7 +47162,10 @@ REMOVE:1899 (det mask) IF
 	(1 adverb)
 	(NOT 1 mask)
 	(NOT 2 mask)
+	(NOT 2 adj-komp)
+	(NOT 2 pres-part)
 ;
+#2022: NOT 2 adj-komp og pres-part (ein mykje større bil)
 
 
 #:1900
@@ -46342,9 +47531,31 @@ REMOVE:1853 (imp) IF
 #:1854
 REMOVE:1854 (imp) IF
 	(-1 setn-gr)
-	(1C nominativ)
+	(1C pron-pers)
+	(1 nominativ)
+;
+#2023: siden nom/akk-distinksjon er endret, gjelder denne bare pron med nom-merking
+
+#:6603
+REMOVE:6603 (imp) IF
+	(-1 setn-gr)
+	(1C pron-pers)
+	(NOT 1 akk)
+	(*1 pres/pret BARRIER setn-gr)
+;
+#2023: tilleggsregel siden 1854 ikke lenger gjelder han, den, ho, det osv
+
+
+
+#:6604
+REMOVE:6604 (imp) IF
+	(0 pres/pret)
+	(-1 setn-gr)
+	(1C pron-pers)
+	(NOT 1 akk)
 ;
 
+#2023: tilleggsregel siden 1854 ikke lenger gjelder han, den, ho, det osv
 
 #:1855
 REMOVE:1855 (imp) IF
@@ -47189,6 +48400,18 @@ REMOVE:1769 (pron nom) IF
 	(*1 pres/pret LINK *-1 ikkje-adv)
 ;
 
+#:6606
+REMOVE:6606 (pron pers) IF
+	(-1C pres/pret)
+	(NOT 1 %som%)
+	(-2C pron-pers)
+	(NOT -2 akk)
+	(1 nom)
+	(NOT 1 ub-det)
+	(*1 pres/pret LINK *-1 ikkje-adv)
+;
+#2023 For å få bort de pronomenene (hans, den, ho osv) som ikke har kasusmarkering. Da de hadde kasusmarkering, ble de tatt av 1769
+
 
 #:1770
 REMOVE:1770 (pron nom) IF
@@ -47197,6 +48420,18 @@ REMOVE:1770 (pron nom) IF
 	(NOT 1 %som%)
 	(-2C pron-nom)
 ;
+
+#:6607
+REMOVE:6607 (pron pers) IF
+	(-1C pres/pret)
+	(NOT *1 pres/pret)
+	(NOT 1 %som%)
+	(-2C pron-pers)
+	(NOT -2 akk)
+	(1 nom)
+	(NOT 1 ub-det)
+;
+#2023 For å få bort de pronomenene (hans, den, ho osv) som ikke har kasusmarkering. Da de hadde kasusmarkering, ble de tatt av 1770
 
 
 #:1771
@@ -47214,6 +48449,19 @@ REMOVE:1772 (pron nom) IF
 	(*-2 ikkje-adv LINK 0 infmerke)
 ;
 
+#:6608
+REMOVE:6608 (pron pers) IF
+	(-1 iv)
+	(NOT 1 %som%-sbu)
+	(NOT 1 verb)
+	(NOT -1 pres/pret)
+	(*-2 ikkje-adv LINK 0 infmerke)
+	(1 nom)
+	(NOT 1 ub-det)
+	(NOT 0 akk)
+;
+
+#2023 For å få bort de pronomenene (hans, den, ho osv) som ikke har kasusmarkering. Da de hadde kasusmarkering, ble de tatt av 1772
 
 #:1773
 REMOVE:1773 (pron nom) IF
@@ -47225,6 +48473,18 @@ REMOVE:1773 (pron nom) IF
 	(NOT -1 pres/pret)
 ;
 
+#:6609
+REMOVE:6609 (pron pers) IF
+	(-1 iv)
+	(NOT 1 akk)
+	(NOT 1 adverb)
+	(NOT 1 prep)
+	(NOT 1 verb)
+	(NOT -1 pres/pret)
+	(1 nom)
+	(NOT 1 ub-det)
+;
+#2023 For å få bort de pronomenene (hans, den, ho osv) som ikke har kasusmarkering. Da de hadde kasusmarkering, ble de tatt av 1773
 
 #:1774
 REMOVE:1774 (pron nom) IF
@@ -47234,6 +48494,17 @@ REMOVE:1774 (pron nom) IF
 	(*-2 ikkje-adv LINK 0 %som%)
 ;
 
+#:6610
+REMOVE:6610 (pron pers) IF
+	(-1 pres/pret)
+	(NOT 1 %som%)
+	(NOT 1 verb)
+	(1 nom)
+	(NOT 1 ub-det)
+	(NOT 1 adverb)
+	(*-2 ikkje-adv LINK 0 %som%)
+;
+#2023 For å få bort de pronomenene (hans, den, ho osv) som ikke har kasusmarkering. Da de hadde kasusmarkering, ble de tatt av 1774
 
 #:1775
 REMOVE:1775 (pron nom) IF
@@ -47725,9 +48996,10 @@ REMOVE:1716 (subst mask eint) IF
 REMOVE:1717 (subst mask eint) IF
 	(0 adj)
 	(NOT 0 mest-sanns-subst-istf-adj)
-	(**-1C det LINK NOT 0 mask LINK NOT 0 fl LINK NOT 0 %sjølv% LINK NOT 0 %kva% LINK NOT 0 %same/neste/eine/einaste/sjølve/førre/forrige%)
-	(**-1C det BARRIER ikkje-adv-adj)
+	(**-1C det LINK NOT 0 mask LINK NOT 0 fl LINK NOT 0 %sjølv% LINK NOT 0 %kva% LINK NOT 0 %same/neste/eine/einaste/sjølve/førre/forrige% LINK **-1C det BARRIER ikkje-adv-adj)
+#	(**-1C det BARRIER ikkje-adv-adj)
 ;
+#2023 flytta "-1C det BARRIER ikkje-adv-adj"
 
 
 #:1713
@@ -47914,6 +49186,7 @@ REMOVE:1693 (subst) IF
 #:1694
 REMOVE:1694 (subst) IF
 	(0 det/adj)
+	(NOT 0 prop)
 	(NOT 0 samset)
 	(NOT 0 farlege-adj)
 	(NOT 0 adj-gen)
@@ -47921,6 +49194,7 @@ REMOVE:1694 (subst) IF
 	(1C subst)
 	(NOT 1 subst-prop)
 ;
+#2022: NOT 0 prop
 
 
 #:1695
@@ -48123,7 +49397,7 @@ REMOVE:1669 (verb inf) IF
 #:1670
 REMOVE:1670 (verb inf) IF
 	(NOT 0 st-form)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 komma)
 	(**-1C setn-gr BARRIER infmerke)
 	(**-1C setn-gr BARRIER m-hj-verb)
@@ -48152,7 +49426,7 @@ REMOVE:1671 (verb inf) IF
 #:1672
 REMOVE:1672 (verb inf) IF
 	(NOT 0 st-form)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 komma)
 	(*-1 infmerke BARRIER setn-gr)
 	(*-1 infmerke LINK **1C inf)
@@ -48252,7 +49526,7 @@ REMOVE:1679 (verb inf) IF
 	(NOT 0 st-form)
 	(-1C ikkje-adv-subst-pron-konj-det-verb)
 	(NOT -1 prep-intrans)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 ;
 
 
@@ -48786,12 +50060,14 @@ REMOVE:1615 (verb perf-part) IF
 #:1616
 REMOVE:1616 (verb perf-part) IF
 	(-1 prep)
-	(NOT -1 @adv)
+	(NOT -1 %som/enn%)	
+	(NOT -1 adv)
 	(NOT -1 %ut%)
 	(NOT -1 %til%)
 	(NOT -1 %bla%)
 	(NOT -1 sbu)
 ;
+#2023: not -1 som/enn (som nemnt)
 
 
 #:1617
@@ -49185,6 +50461,7 @@ REMOVE:1587 (verb pret) IF
 	(NOT -1 parentes)
 	(NOT -1 adv)
 	(NOT -1 subst/pron)
+	(NOT -1 tal)
 	(*-1 setn-gr LINK **1C fv LINK NOT 0 trans2)
 	(*-1 setn-gr LINK NOT -1 >>>)
 	(*-1 setn-gr LINK NOT 0 %som%)
@@ -49194,6 +50471,7 @@ REMOVE:1587 (verb pret) IF
 #:1588
 REMOVE:1588 (verb pret) IF
 	(NOT 0 hj-verb)
+	(NOT 0 imp)
 	(-1 >>>)
 	(NOT *2 overskrift)
 	(NOT *2 spørsmål-t)
@@ -49210,6 +50488,7 @@ REMOVE:1589 (verb pret) IF
 
 #:1590
 REMOVE:1590 (verb pret) IF
+	(NOT 0 %var%)
 	(NOT 0 imp)
 	(-1 sbu)
 	(-1 prep)
@@ -49333,7 +50612,7 @@ REMOVE:1543 (verb) IF
 	(0 fv)
 	(NOT 0 %skal%)
 	(-1C prep)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(-2 %som%)
 ;
 
@@ -49343,7 +50622,7 @@ REMOVE:1544 (verb) IF
 	(0 fv)
 	(NOT 0 %skal%)
 	(-1C prep)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 %som%)
 	(NOT -1 prep-intrans)
 	(-2 setn-gr)
@@ -49366,7 +50645,7 @@ REMOVE:1546 (verb) IF
 	(NOT 0 %skal%)
 	(-1 prep)
 	(NOT -1 %etter%)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 prep-intrans)
 	(NOT -1 %som%)
 	(NOT -1 ikkje-prep-sbu)
@@ -49577,6 +50856,9 @@ CONSTRAINTS
 
 
 
+
+
+
 #:6020
 "<føre>" SELECT:6020 (prep) IF
 	 (0 prep)
@@ -49758,6 +51040,7 @@ CONSTRAINTS
 ;
 
 
+
 #:6107
 "<skrå>" SELECT:6107 (subst) IF
 	 (*-1 %tygge/spytte% BARRIER setn-gr)
@@ -49830,8 +51113,23 @@ CONSTRAINTS
 #:6103
 "<fór>" REMOVE:6103 (adj)
 	(0 verb)
+	(NOT 0 adj-komp)
 ;
-#sjeldent i betydningen snøgg
+#sjeldent i betydningen snøgg. Bare ved fórare.
+
+
+
+#:6500
+"<for>" REMOVE:6500 (adj)
+	(NOT 0 adj-komp)
+;
+#sjeldent i betydningen snøgg. Bare ved forare.
+
+#:6502
+"<fort>" REMOVE:6502 ("for" adj pos nøyt ub eint)
+	 (0 <adv>)
+;
+#sjeldent i betydningen snøgg. Bare ved forare.
 
 
 #:4817
@@ -49958,7 +51256,11 @@ CONSTRAINTS
 ;
 
 
-
+#:6623
+"<ver>" REMOVE:6623 (verb pres) IF
+	(0 subst-ub)
+;
+#ikkje så vanleg form av verja vel?
 
 #:6038
 "<visst>" REMOVE:6038 ("visst" adj pos nøyt ub eint) IF
@@ -49995,6 +51297,7 @@ SELECT:6137 (verb inf) IF
 	(-1 %og%/komma)
 	(*-1C inf BARRIER fv)
 ;
+
 #å syngja med i og prisa og lovsynga herren
 
 
@@ -51272,7 +52575,14 @@ SELECT:1433 (subst) IF
 	(0 samset)
 	(NOT 0 pres/pret)
 	(NOT 1 subst)
+	(NOT 0 %-isk%)
+	(NOT 0 %-messig%)
+	(NOT 0 %-sig%)
+	(NOT 1 komma/konj)
 ;
+
+#2022: (NOT 0 %-isk%) 	(NOT 0 %-messig%) 	(NOT 0 %-sig%)
+#2022: 	(NOT 1 komma/konj)
 
 
 #:1434
@@ -51282,7 +52592,7 @@ SELECT:1434 (subst) IF
 	(-1C prep)
 	(NOT 1 komma/konj)
 	(NOT 1 subst/adj)
-	(NOT -1 @adv)
+	(NOT -1 adv)
 	(NOT -1 prep-intrans)
 	(NOT -1 %som/enn%)
 ;
@@ -52780,8 +54090,10 @@ REMOVE:1324 (verb pret) IF
 REMOVE:2183 (<perf-part>) IF
 	(0 subst)
 	(0 samset)
-	(NOT 0 perf-part) 
+	(NOT 0 perf-part)
+
 ;
+
 
 
 #:1320
@@ -52925,3 +54237,10 @@ REMOVE:6095 (verb pret) IF
 	(NOT 0 imp)
 ;
 
+#6519:
+ REMOVE:6519 (subst) IF
+	   (0 %i%)
+	   (0 prep)
+	   (NOT -1 %ein%)
+;
+#i er sjeldan subst
